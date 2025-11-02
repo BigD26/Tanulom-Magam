@@ -6,7 +6,7 @@ const kerdesek = [
       tipus: "checkbox",
       valaszok: ["Kutya", "Krokodil", "Macska", "Varjú"],
       helyes: ["Kutya", "Macska"],
-      kep: "sample.jpg"
+      kep: "Sample.jpg"
     },
     {
       szoveg: "Melyik bolygó a Naprendszerben a harmadik?",
@@ -13443,4 +13443,5 @@ const kerdesek = [
     "helyes": "Bár a technológia nagyobb energiaigényű, az intelligens energiagazdálkodás és a megújuló energiaforrások integrációja, valamint a hatékonyabb erőforrás-kihasználás összességében pozitív környezeti mérleget eredményezhet."
   }
 ]
+
 ];
