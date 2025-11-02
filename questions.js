@@ -6,7 +6,7 @@ const kerdesek = [
       tipus: "checkbox",
       valaszok: ["Kutya", "Krokodil", "Macska", "Varjú"],
       helyes: ["Kutya", "Macska"],
-      kep: "Sample.jpg"
+      kep: "sample.jpg"
     },
     {
       szoveg: "Melyik bolygó a Naprendszerben a harmadik?",
@@ -13445,3 +13445,4 @@ const kerdesek = [
 ]
 
 ];
+
