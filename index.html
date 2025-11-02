@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanulom Magam</title>
+    <link rel="icon" type="image/x-icon" href="System/Images/Logo.ico">
+    <link rel="stylesheet" href="System/style.css">
+    <script src="questions.js" defer></script>
+    <script src="System/script.js" defer></script>
+</head>
+
+<body>
+    <div id="main_div">
+        <label for="kerdesSorSelect">Válassz kérdéssort:</label>
+        <div class="top_div">
+            <button id="loadSorBtn" class="top_btn">Betöltés</button>
+            <select id="kerdesSorSelect">
+                <option value="" disabled selected>Válassz egy kérdéssort...</option>
+            </select>
+            <button class="end_btn"></button>
+        </div>
+
+        <br>
+        <label for="startIndex" id="startLabel" style="display:none;">Kérdés száma, ahonnan folytatod:</label>
+        <div class="top_div">
+            <button id="startBtn" class="top_btn" disabled style="display:none;">Ugrás ide</button>
+            <input type="number" id="startIndex" min="1" placeholder="Feladat Sorszáma" style="display:none;">
+            <button id="end_btn" class="end_btn" style="display:none;"></button>
+        </div>
+
+        <br><hr><br>
+        <div id="question-container"></div>
+        <div id="bottom_btn_div">
+            <button class="direction_btn bottom_btn" id="elozo" style="display:none;">Vissza</button>
+            <button class="bottom_btn" id="ellenoriz" style="display:none;">Ellenőrzés</button>
+            <button class="direction_btn bottom_btn" id="tovabb" style="display:none;">Tovább</button>
+        </div>
+
+        <button id="ujrakezdes" class="bottom_btn" style="display:none;">Újrakezdés</button>
+    </div>
+</body>
+
+</html>
