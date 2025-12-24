@@ -277,5 +277,81 @@ const kerdesek = [
       helyes: ["Egyszerű szelekciós vezérlés", "Kezdőfeltételes ismétléses vezérlés"],
       kep: "program2.png"
     },
+    {
+      szoveg: "Minek a definíciója a következő: A program olyan komponense, amely valamilyen típusú konstans értéket jelöl közvetlen, vagyis nem külön azonosítóval ellátott formában?",
+      tipus: "radio",
+      valaszok: ["Literál", "Konstans", "Függvény", "Kifejezés"],
+      helyes: "Literál",
+      kep: null
+    },
+    {
+      szoveg: "Mire jó a Python with utasítása/környezete?",
+      tipus: "radio",
+      valaszok: ["Erőforrások használata során biztosítja az erőforrás lezárását, akár volt hiba a használat közben, akár nem.", "Ez az utasítás nyitja meg a fájlokat és adja vissza őkez az as kulcsszó után megadott néven.", "Végigiterál a megnyitott fájlon, és egyenként visszaadja annak a sorait az as kulcsszó után megadott változóban.", "Ez az utasítás szükséges az erőforrások használatához."],
+      helyes: "Erőforrások használata során biztosítja az erőforrás lezárását, akár volt hiba a használat közben, akár nem.",
+      kep: null
+    },
+    {
+      szoveg: "Mit írhat elő leginkább a szekvenciális vezérlés?",
+      tipus: "radio",
+      valaszok: ["Az algoritmus lépéseinek megadott sorrendben történő egyszeri végrehajtását.", "Két utasítás közül valamilyen feltétel alapján az egyik végrehajtását.", "Több utasítás közül valamilyen feltételek alapján az egyik végrehajtását.", "Egy utasítás megadott számú ismétlését."],
+      helyes: "Az algoritmus lépéseinek megadott sorrendben történő egyszeri végrehajtását.",
+      kep: null
+    },
+    {
+      szoveg: "Tegye sorrendbe a függvényhívás végrehajtásának technikai lépésit!",
+      tipus: "sorrend",
+      valaszok: ["Függvényhívás argumentumainak kiértékelése.", "Argumentumok értékének átadása a függvény paraméterei részére.", "Visszatérési érték kiszámítása.", "Vezérlés visszaadása a hívó félnek."],
+      helyes: ["Függvényhívás argumentumainak kiértékelése.", "Argumentumok értékének átadása a függvény paraméterei részére.", "Visszatérési érték kiszámítása.", "Vezérlés visszaadása a hívó félnek."]
+    },
+    {
+      szoveg: "A szinusz(x) értékét kell közelíteni az összegképlet segítségével. Mely állítások igazak az algoritmustervezéssel és Python megvalósítással kapcsolatban?",
+      tipus: "radio",
+      valaszok: ["Az összegképlet következő tagját érdemes az előző tagból kiszámolni, nem pedig teljesen újonnan előállítani.", "Az összegképletben használt faktoriális műveletet érdemes külön függvénybe kiszervezni.", "Az összegzés egy számlálásos vezérlésen alapul.", "Az összegképlet tagjait érdemes egy halmazban gyűjteni, majd utólag összegezni."],
+      helyes: "Az összegképlet következő tagját érdemes az előző tagból kiszámolni, nem pedig teljesen újonnan előállítani.",
+      kep: null
+    },
+    {
+      szoveg: "Mely állítások igazak a Python set adattípusára? (2 helyes válasz van, a többi hamis.)",
+      tipus: "checkbox",
+      valaszok: ["A <b>-</b> operátor is értelmezett az értékein.", "A <b>not</b> operátor is értelmezett az értékein.", "A <b>+</b> és <b>*</b> operátorok is értelmezettek az értékein.", "Egy adott értékének elemei módosíthatóak az <b>[]</b> operátor és az értékadás művelet segítségével.", "Bármely (látszólag) értékmódosító művelete egy új értéket hoz létre."],
+      helyes: ["A - operátor is értelmezett az értékein.", "Bármely (látszólag) értékmódosító művelete egy új értéket hoz létre."],
+      kep: null
+    },
+    {
+      szoveg: "Meg kell határozni az összes prímszámot egy, a felhasználó által megadott számig. Mely állítások igazak az algoritmustervezéssel és Python megvalósítással kapcsolatban?",
+      tipus: "radio",
+      valaszok: ["A kérdéses intervallumba eső számokról egyesével eldönteni, hogy prím-e, alapvetően kevésbé hatékony megvalósításhoz vezet.", "Az Eratoszthenészi szita algoritmus minden esetben gyorsabb megvalósításhoz vezet, mint a számok egyedi elbírálásán alapuló algoritmus.", "Az Eratoszthenészi szita algoritmus lista típussal történő megvalósítása Python-ban hatékonyabb, mint a halmazzal való megvalósítás.", "Az Eratoszthenészi szita algoritmus halmazos és listás megvalósítása között Python-ban nem igazán van hatékonyságbeli különbség."],
+      helyes: "A kérdéses intervallumba eső számokról egyesével eldönteni, hogy prím-e, alapvetően kevésbé hatékony megvalósításhoz vezet.",
+      kep: null
+    },
+    {
+      szoveg: "Milyen tevékenységek nem kifejezetten szoftverfejlesztési feladatok?",
+      tipus: "radio",
+      valaszok: ["Annak eldöntése, hogy elhalasztjuk a szoftver kiadását.", "A program követelményeinek, specifikációjának átnézése.", "A program forráskódjának átnézése.", "Vélemény kialakítása a szoftver minőségéről."],
+      helyes: "Annak eldöntése, hogy elhalasztjuk a szoftver kiadását.",
+      kep: null
+    },
+    {
+      szoveg: "A rekurzió nem csak függvényekre, hanem eljárásokra is működik, mert a visszatérési érték felhasználása a rekurzió során nem kötelező.",
+      tipus: "radio",
+      valaszok: ["(nincs válasz)", "Egyik állítás sem igaz.", "Az első állítás igaz, a második hamis.", "Az első állítás hamis, a második igaz.", "Mindkét állítás igaz, de nincs összefüggés köztük.", "Mindkét állítás igaz, és összefüggés van köztük."],
+      helyes: "Mindkét állítás igaz, és összefüggés van köztük.",
+      kep: null
+    },
+    {
+      szoveg: "Mely állítások igazak a Python list adattípusára? (2 helyes válasz van, a többi hamis.)",
+      tipus: "checkbox",
+      valaszok: ["Értékkészlete összetett értékekből áll.", "Az értékkészletét tetszőleges értékekből álló sorozatok alkotják.", "Jól használható tetszőleges számlálásos vezérlés megvalósítására.", "Egy adott értékének elemeit nem tárolja el egyszerre.", "Egy adott értéke nem tartalmazhat változtatható értékeket."],
+      helyes: ["Értékkészlete összetett értékekből áll.", "Az értékkészletét tetszőleges értékekből álló sorozatok alkotják."],
+      kep: null
+    },
+    {
+      szoveg: "Milyen vezérlési szerkezet megvalósítása látható az alábbi kódban (2 helyes válasz van, a többi hamis.):",
+      tipus: "checkbox",
+      valaszok: ["Szekvenciális vezérlés", "Kezdőfeltételes ismétléses vezérlés", "Diszkrét ismétléses vezérlés", "Eljárásvezérlés", "Függvényvezérlés"],
+      helyes: ["Szekvenciális vezérlés", "Kezdőfeltételes ismétléses vezérlés"],
+      kep: "program3.png"
+    },
   ]
 ];
