@@ -534,5 +534,47 @@ const kerdesek = [
       helyes: ["Eljárásvezérlés", "Függvényvezérlés"],
       kep: "program4.png"
     },
+    {
+      szoveg: "Python-ban nem lehet rekurzívan függvényt hívni, mert a visszatérési érték felhasználása a rekurzió során nem kötelező.",
+      tipus: "radio",
+      valaszok: ["(nincs válasz)", "Egyik állítás sem igaz.", "Az első állítás igaz, a második hamis.", "Az első állítás hamis, a második igaz.", "Mindkét állítás igaz, de nincs összefüggés köztük.", "Mindkét állítás igaz, és összefüggés van köztük."],
+      helyes: "Az első állítás hamis, a második igaz.",
+      kep: null
+    },
+    {
+      szoveg: "Mi a szintaxis?",
+      tipus: "radio",
+      valaszok: ["Az adott nyelvben érvényes jelsorozatokat definiáló szabályhalmaz.", "Az az egység, amelyet az értékkészlet és a műveletek határoznak meg.", "Egy adattípus műveleteinek leírása.", "Adott típusú összes feladat megoldására vonatkozó pontos előírás."],
+      helyes: "Az adott nyelvben érvényes jelsorozatokat definiáló szabályhalmaz.",
+      kep: null
+    },
+    {
+      szoveg: "Meg kell határozni az összes prímszámot egy, a felhasználó által megadott számig. Mely állítások igazak az algoritmustervezéssel és Python megvalósítással kapcsolatban?",
+      tipus: "radio",
+      valaszok: ["A kérdéses intervallumba eső számokról egyesével eldönteni, hogy prím-e, alapvetően kevésbé hatékony megvalósításhoz vezet.", "Az Eratoszthenészi szita algoritmus minden esetben gyorsabb megvalósításhoz vezet, mint a számok egyedi elbírálásán alapuló algoritmus.", "Az Eratoszthenészi szita algoritmus halmazos és listás megvalósítása között Python-ban nem igazán van hatékonyságbeli különbség.", "Egy konkrét számról eldönteni, hogy prím-e, hatékonyabb az Eratoszthenészi szita algoritmussal, mint egyedi ellenőrzéssel."],
+      helyes: "A kérdéses intervallumba eső számokról egyesével eldönteni, hogy prím-e, alapvetően kevésbé hatékony megvalósításhoz vezet.",
+      kep: null
+    },
+    {
+      szoveg: "Mit írhat elő leginkább az ismétléses vezérlés?",
+      tipus: "radio",
+      valaszok: ["Egy utasítás megadott számú ismétlését.", "Az algoritmus lépéseinek megadott sorrendben történő egyszeri végrehajtását.", "Egy kifejezés értéke alapján több utasítás közül az egyik végrehajtását.", "Egy előre megadott részalgoritmus alkalmazását valamilyen adatokra."],
+      helyes: "Egy utasítás megadott számú ismétlését.",
+      kep: null
+    },
+    {
+      szoveg: "Mely állítások igazak a Python tuple adattípusára? (2 helyes válasz van, a többi hamis.)",
+      tipus: "checkbox",
+      valaszok: ["A <b>not</b> operátor is értelmezett az értékein.", "Bármely (látszólag) értékmódosító művelete egy új értéket hoz létre.", "A <b>-</b> operátor is értelmezett az értékein.", "Az <b>and</b> és <b>or</b> operátorok nem értelmezettek az értékein.", "Egy adott értékének elemei módosíthatóak az <b>[]</b> operátor és az értékadás művelet segítségével."],
+      helyes: ["A not operátor is értelmezett az értékein.", "Bármely (látszólag) értékmódosító művelete egy új értéket hoz létre."],
+      kep: null
+    },
+    {
+      szoveg: "Mi történik a szoftverfejlesztés \"Specifikáció\" nevű lépésében?",
+      tipus: "radio",
+      valaszok: ["Valamilyen formálisabb (pl. matematikai) nyelven megfogalmazzuk a problémát.", "Létrehozzuk a problémát megoldó algoritmust.", "Ellenőrizzük hogy a létrehozott program megfelel-e a vele szemben támasztott követelményeknek.", "Ellenőrizzük, hogy a létrehozott program használható-e arra, amire tervezték."],
+      helyes: "Valamilyen formálisabb (pl. matematikai) nyelven megfogalmazzuk a problémát.",
+      kep: null
+    },
   ]
 ];
