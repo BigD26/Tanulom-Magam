@@ -93,7 +93,6 @@ elozoBtn.onclick = () => {
 ujrakezdesBtn.onclick = () => {
   currentIndex = 0;
 
-  // Megjelenítjük a gombokat és inputokat
   ellenorizBtn.style.display = "inline-block";
   tovabbBtn.style.display = "inline-block";
   elozoBtn.style.display = "inline-block";
@@ -105,7 +104,6 @@ ujrakezdesBtn.onclick = () => {
 
   ujrakezdesBtn.style.display = "none";
 
-  // Üres tartalom és új kérdés
   container.innerHTML = "";
   showQuestion(currentIndex);
 };
@@ -129,12 +127,10 @@ function showQuestion(index) {
   const k = currentSor[index];
   const div = document.createElement("div");
 
-  // Cím
   const title = document.createElement("h3");
   title.textContent = `${index + 1}. ${k.szoveg}`;
   div.appendChild(title);
 
-  // Kép
   if (k.kep) {
     const img = document.createElement("img");
     img.src = "System/Images/" + k.kep;
@@ -178,7 +174,6 @@ function showQuestion(index) {
 
   container.appendChild(div);
 
-  /* ===== GOMBOK ===== */
   ujrakezdesBtn.style.display = "none";
   ellenorizBtn.style.display = "inline-block";
   tovabbBtn.style.display = "inline-block";
@@ -201,7 +196,6 @@ function renderDragDrop(k, parent) {
 
   const items = [...k.parok.map(p => p.bal).flat(), ...(k.kihagyhato || [])];
   shuffleArray(items);
-
   dragRow.dataset.allItems = JSON.stringify(items);
 
   items.forEach(text => {
@@ -323,18 +317,37 @@ function renderSortOrder(k, parent) {
   const list = document.createElement("ul");
   list.className = "sortable-list";
 
-  k.valaszok.forEach(v => {
+  const items = [...k.valaszok];
+  shuffleArray(items);
+
+  items.forEach(v => {
     const li = document.createElement("li");
     li.className = "sortable-item";
     li.textContent = v;
     li.draggable = true;
 
+    // Drag & drop desktop
     li.addEventListener("dragstart", e => {
       e.dataTransfer.setData("text/plain", v);
       li.classList.add("dragging");
     });
     li.addEventListener("dragend", e => {
       li.classList.remove("dragging");
+    });
+
+    // Mobil kattintós sorrendváltás
+    li.addEventListener("click", () => {
+      const selected = list.querySelector(".selected");
+      if (selected) {
+        const currentIndex = Array.from(list.children).indexOf(li);
+        const selectedIndex = Array.from(list.children).indexOf(selected);
+        if (currentIndex !== selectedIndex) {
+          list.insertBefore(selected, currentIndex > selectedIndex ? li.nextSibling : li);
+        }
+        selected.classList.remove("selected");
+      } else {
+        li.classList.add("selected");
+      }
     });
 
     list.appendChild(li);
@@ -356,7 +369,6 @@ function renderSortOrder(k, parent) {
 
 function getDragAfterElement(container, y) {
   const draggableElements = [...container.querySelectorAll(".sortable-item:not(.dragging)")];
-
   return draggableElements.reduce((closest, child) => {
     const box = child.getBoundingClientRect();
     const offset = y - box.top - box.height / 2;
@@ -388,12 +400,10 @@ function evaluateCurrentQuestion() {
       z.classList.remove("helyes", "helytelen");
       const lista = JSON.parse(z.dataset.valaszok);
       const helyes = JSON.parse(z.dataset.helyes);
-
       if (lista.length === 0) {
         z.classList.add("helytelen");
         return;
       }
-
       const hibas = lista.some(v => !helyes.includes(v));
       z.classList.add(hibas ? "helytelen" : "helyes");
     });
@@ -401,8 +411,9 @@ function evaluateCurrentQuestion() {
     const items = Array.from(document.querySelectorAll(".sortable-item")).map(li => li.textContent);
     const helyes = k.helyes;
     items.forEach((val, i) => {
-      if (val === helyes[i]) document.querySelectorAll(".sortable-item")[i].classList.add("helyes");
-      else document.querySelectorAll(".sortable-item")[i].classList.add("helytelen");
+      const li = document.querySelectorAll(".sortable-item")[i];
+      if (val === helyes[i]) li.classList.add("helyes");
+      else li.classList.add("helytelen");
     });
   }
 }
