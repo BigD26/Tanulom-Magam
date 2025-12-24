@@ -193,6 +193,7 @@ function showQuestion(index) {
 }
 
 /* ===== DRAG & DROP ===== */
+/* ===== DRAG & DROP - DESKTOP + MOBIL ===== */
 function renderDragDrop(k, parent) {
   const wrapper = document.createElement("div");
   wrapper.className = "dragdrop-wrapper";
@@ -206,6 +207,7 @@ function renderDragDrop(k, parent) {
   const items = [...k.parok.map(p => p.bal), ...(k.kihagyhato || [])];
   shuffleArray(items);
 
+  // Forrás elemek létrehozása
   items.forEach(text => {
     const el = document.createElement("div");
     el.className = "drag-item";
@@ -215,19 +217,16 @@ function renderDragDrop(k, parent) {
     el.draggable = true;
     el.ondragstart = e => e.dataTransfer.setData("text/plain", text);
 
-    // Mobil / touch: toggle selection
+    // Mobil: tap to select
     el.addEventListener("click", () => {
-      if (el.classList.contains("selected")) {
-        el.classList.remove("selected");
-      } else {
-        document.querySelectorAll(".drag-item.selected").forEach(d => d.classList.remove("selected"));
-        el.classList.add("selected");
-      }
+      document.querySelectorAll(".drag-item.selected").forEach(d => d.classList.remove("selected"));
+      el.classList.add("selected");
     });
 
     dragRow.appendChild(el);
   });
 
+  // Drop-zónák létrehozása
   k.parok.forEach(p => {
     const zone = document.createElement("div");
     zone.className = "drop-zone";
@@ -238,14 +237,14 @@ function renderDragDrop(k, parent) {
     label.textContent = p.jobb;
     zone.appendChild(label);
 
-    // Desktop drop
+    // Desktop
     zone.ondragover = e => e.preventDefault();
     zone.ondrop = e => {
       e.preventDefault();
       moveToZone(zone, e.dataTransfer.getData("text/plain"));
     };
 
-    // Mobil tap: ha van kijelölt elem
+    // Mobil: tap
     zone.addEventListener("click", () => {
       const selected = document.querySelector(".drag-item.selected");
       if (selected) {
@@ -262,7 +261,9 @@ function renderDragDrop(k, parent) {
   parent.appendChild(wrapper);
 }
 
+// Elem mozgatása a zónákba
 function moveToZone(zone, val) {
+  // Eltávolítás az összes zónából
   document.querySelectorAll(".drop-zone").forEach(z => {
     let l = JSON.parse(z.dataset.valaszok);
     if (l.includes(val)) {
@@ -271,12 +272,14 @@ function moveToZone(zone, val) {
     }
   });
 
+  // Hozzáadás az aktuális zónához
   let lista = JSON.parse(zone.dataset.valaszok);
-  lista.push(val);
+  if (!lista.includes(val)) lista.push(val);
   zone.dataset.valaszok = JSON.stringify(lista);
   renderZone(zone);
 }
 
+// Drop-zóna frissítése
 function renderZone(zone) {
   zone.querySelectorAll(".drop-value").forEach(e => e.remove());
   const lista = JSON.parse(zone.dataset.valaszok);
@@ -285,16 +288,22 @@ function renderZone(zone) {
     const el = document.createElement("div");
     el.className = "drop-value";
     el.textContent = val;
-    el.draggable = true;
 
+    // Desktop: dupla kattintás vissza a forráshoz
     el.ondblclick = () => {
       zone.dataset.valaszok = JSON.stringify(lista.filter(v => v !== val));
       renderZone(zone);
     };
 
-    el.ondragstart = e => {
-      e.dataTransfer.setData("text/plain", val);
-    };
+    // Mobil: tap vissza a forráshoz
+    el.addEventListener("click", () => {
+      zone.dataset.valaszok = JSON.stringify(lista.filter(v => v !== val));
+      renderZone(zone);
+    });
+
+    // Desktop: drag
+    el.draggable = true;
+    el.ondragstart = e => e.dataTransfer.setData("text/plain", val);
 
     zone.appendChild(el);
   });
