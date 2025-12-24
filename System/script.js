@@ -110,13 +110,11 @@ ujrakezdesBtn.onclick = () => {
   showQuestion(currentIndex);
 };
 
-
 /* ===== KÉRDÉS MEGJELENÍTÉS ===== */
 function showQuestion(index) {
   container.innerHTML = "";
   ellenorizBtn.disabled = false;
 
-  // Ha a kérdéssor vége
   if (index >= currentSor.length) {
     container.innerHTML = "<strong>A kérdéssor vége</strong>";
 
@@ -150,34 +148,32 @@ function showQuestion(index) {
     shuffleArray(vals);
 
     vals.forEach(v => {
-        const lbl = document.createElement("label");
-        lbl.className = "input_design";
+      const lbl = document.createElement("label");
+      lbl.className = "input_design";
 
-        const inp = document.createElement("input");
-        inp.type = k.tipus;
-        inp.name = k.tipus === "checkbox" ? `q${index}[]` : `q${index}`;
-        inp.value = v.replace(/<[^>]+>/g, ''); // az értéket mindig tisztán tároljuk
+      const inp = document.createElement("input");
+      inp.type = k.tipus;
+      inp.name = k.tipus === "checkbox" ? `q${index}[]` : `q${index}`;
+      inp.value = v.replace(/<[^>]+>/g, '');
 
-        lbl.appendChild(inp);
+      lbl.appendChild(inp);
 
-        // A v-ben lehet HTML, ezt innerHTML-ként tesszük be
-        const span = document.createElement("span");
-        span.innerHTML = " " + v; 
-        lbl.appendChild(span);
+      const span = document.createElement("span");
+      span.innerHTML = " " + v;
+      lbl.appendChild(span);
 
-        div.appendChild(lbl);
+      div.appendChild(lbl);
     });
-}
-
-  else if (k.tipus === "text") {
+  } else if (k.tipus === "text") {
     const inp = document.createElement("input");
     inp.type = "text";
     inp.name = `q${index}`;
     inp.className = "text_input";
     div.appendChild(inp);
-  }
-  else if (k.tipus === "dragdrop") {
+  } else if (k.tipus === "dragdrop") {
     renderDragDrop(k, div);
+  } else if (k.tipus === "sorrend") {
+    renderSortOrder(k, div);
   }
 
   container.appendChild(div);
@@ -193,7 +189,6 @@ function showQuestion(index) {
 }
 
 /* ===== DRAG & DROP ===== */
-/* ===== DRAG & DROP - DESKTOP + MOBIL ===== */
 function renderDragDrop(k, parent) {
   const wrapper = document.createElement("div");
   wrapper.className = "dragdrop-wrapper";
@@ -204,20 +199,19 @@ function renderDragDrop(k, parent) {
   const dropRow = document.createElement("div");
   dropRow.className = "drop-zones";
 
-  const items = [...k.parok.map(p => p.bal), ...(k.kihagyhato || [])];
+  const items = [...k.parok.map(p => p.bal).flat(), ...(k.kihagyhato || [])];
   shuffleArray(items);
 
-  // Forrás elemek létrehozása
+  dragRow.dataset.allItems = JSON.stringify(items);
+
   items.forEach(text => {
     const el = document.createElement("div");
     el.className = "drag-item";
     el.textContent = text;
 
-    // Desktop drag
     el.draggable = true;
     el.ondragstart = e => e.dataTransfer.setData("text/plain", text);
 
-    // Mobil: tap to select
     el.addEventListener("click", () => {
       document.querySelectorAll(".drag-item.selected").forEach(d => d.classList.remove("selected"));
       el.classList.add("selected");
@@ -226,25 +220,22 @@ function renderDragDrop(k, parent) {
     dragRow.appendChild(el);
   });
 
-  // Drop-zónák létrehozása
   k.parok.forEach(p => {
     const zone = document.createElement("div");
     zone.className = "drop-zone";
-    zone.dataset.helyes = p.bal;
+    zone.dataset.helyes = Array.isArray(p.bal) ? JSON.stringify(p.bal) : JSON.stringify([p.bal]);
     zone.dataset.valaszok = "[]";
 
     const label = document.createElement("span");
     label.textContent = p.jobb;
     zone.appendChild(label);
 
-    // Desktop
     zone.ondragover = e => e.preventDefault();
     zone.ondrop = e => {
       e.preventDefault();
       moveToZone(zone, e.dataTransfer.getData("text/plain"));
     };
 
-    // Mobil: tap
     zone.addEventListener("click", () => {
       const selected = document.querySelector(".drag-item.selected");
       if (selected) {
@@ -261,26 +252,24 @@ function renderDragDrop(k, parent) {
   parent.appendChild(wrapper);
 }
 
-// Elem mozgatása a zónákba
 function moveToZone(zone, val) {
-  // Eltávolítás az összes zónából
+  const dragRow = zone.parentElement.parentElement.querySelector(".drag-items");
+
   document.querySelectorAll(".drop-zone").forEach(z => {
     let l = JSON.parse(z.dataset.valaszok);
     if (l.includes(val)) {
       z.dataset.valaszok = JSON.stringify(l.filter(v => v !== val));
-      renderZone(z);
+      renderZone(z, dragRow);
     }
   });
 
-  // Hozzáadás az aktuális zónához
   let lista = JSON.parse(zone.dataset.valaszok);
   if (!lista.includes(val)) lista.push(val);
   zone.dataset.valaszok = JSON.stringify(lista);
-  renderZone(zone);
+  renderZone(zone, dragRow);
 }
 
-// Drop-zóna frissítése
-function renderZone(zone) {
+function renderZone(zone, dragRow) {
   zone.querySelectorAll(".drop-value").forEach(e => e.remove());
   const lista = JSON.parse(zone.dataset.valaszok);
 
@@ -289,24 +278,92 @@ function renderZone(zone) {
     el.className = "drop-value";
     el.textContent = val;
 
-    // Desktop: dupla kattintás vissza a forráshoz
     el.ondblclick = () => {
       zone.dataset.valaszok = JSON.stringify(lista.filter(v => v !== val));
-      renderZone(zone);
+      renderZone(zone, dragRow);
     };
 
-    // Mobil: tap vissza a forráshoz
     el.addEventListener("click", () => {
       zone.dataset.valaszok = JSON.stringify(lista.filter(v => v !== val));
-      renderZone(zone);
+      renderZone(zone, dragRow);
     });
 
-    // Desktop: drag
     el.draggable = true;
     el.ondragstart = e => e.dataTransfer.setData("text/plain", val);
 
     zone.appendChild(el);
   });
+
+  const allVals = [...dragRow.querySelectorAll(".drag-item")];
+  allVals.forEach(el => el.remove());
+
+  const sourceItems = JSON.parse(dragRow.dataset.allItems || "[]");
+  sourceItems.forEach(text => {
+    const inZone = Array.from(document.querySelectorAll(".drop-zone")).some(z => JSON.parse(z.dataset.valaszok).includes(text));
+    if (!inZone) {
+      const el = document.createElement("div");
+      el.className = "drag-item";
+      el.textContent = text;
+      el.draggable = true;
+      el.ondragstart = e => e.dataTransfer.setData("text/plain", text);
+      el.addEventListener("click", () => {
+        document.querySelectorAll(".drag-item.selected").forEach(d => d.classList.remove("selected"));
+        el.classList.add("selected");
+      });
+      dragRow.appendChild(el);
+    }
+  });
+}
+
+/* ===== SORREND KÉRDÉS ===== */
+function renderSortOrder(k, parent) {
+  const wrapper = document.createElement("div");
+  wrapper.className = "sortable-wrapper";
+
+  const list = document.createElement("ul");
+  list.className = "sortable-list";
+
+  k.valaszok.forEach(v => {
+    const li = document.createElement("li");
+    li.className = "sortable-item";
+    li.textContent = v;
+    li.draggable = true;
+
+    li.addEventListener("dragstart", e => {
+      e.dataTransfer.setData("text/plain", v);
+      li.classList.add("dragging");
+    });
+    li.addEventListener("dragend", e => {
+      li.classList.remove("dragging");
+    });
+
+    list.appendChild(li);
+  });
+
+  list.addEventListener("dragover", e => {
+    e.preventDefault();
+    const afterElement = getDragAfterElement(list, e.clientY);
+    const dragging = list.querySelector(".dragging");
+    if (!dragging) return;
+
+    if (afterElement == null) list.appendChild(dragging);
+    else list.insertBefore(dragging, afterElement);
+  });
+
+  wrapper.appendChild(list);
+  parent.appendChild(wrapper);
+}
+
+function getDragAfterElement(container, y) {
+  const draggableElements = [...container.querySelectorAll(".sortable-item:not(.dragging)")];
+
+  return draggableElements.reduce((closest, child) => {
+    const box = child.getBoundingClientRect();
+    const offset = y - box.top - box.height / 2;
+    if (offset < 0 && offset > closest.offset) {
+      return { offset: offset, element: child };
+    } else return closest;
+  }, { offset: Number.NEGATIVE_INFINITY }).element;
 }
 
 /* ===== KIÉRTÉKELÉS ===== */
@@ -318,34 +375,34 @@ function evaluateCurrentQuestion() {
       if (k.helyes.includes(i.value)) i.parentElement.classList.add("helyes");
       else if (i.checked) i.parentElement.classList.add("helytelen");
     });
-  }
-
-  else if (k.tipus === "radio") {
+  } else if (k.tipus === "radio") {
     document.querySelectorAll(`input[name="q${currentIndex}"]`).forEach(i => {
       if (i.value === k.helyes) i.parentElement.classList.add("helyes");
       else if (i.checked) i.parentElement.classList.add("helytelen");
     });
-  }
-
-  else if (k.tipus === "text") {
+  } else if (k.tipus === "text") {
     const inp = document.querySelector(`input[name="q${currentIndex}"]`);
     inp.classList.add(inp.value === k.helyes ? "helyes" : "helytelen");
-  }
-
-  else if (k.tipus === "dragdrop") {
+  } else if (k.tipus === "dragdrop") {
     document.querySelectorAll(".drop-zone").forEach(z => {
       z.classList.remove("helyes", "helytelen");
-
       const lista = JSON.parse(z.dataset.valaszok);
-      const helyes = z.dataset.helyes;
+      const helyes = JSON.parse(z.dataset.helyes);
 
       if (lista.length === 0) {
         z.classList.add("helytelen");
         return;
       }
 
-      const hibas = lista.some(v => v !== helyes);
+      const hibas = lista.some(v => !helyes.includes(v));
       z.classList.add(hibas ? "helytelen" : "helyes");
+    });
+  } else if (k.tipus === "sorrend") {
+    const items = Array.from(document.querySelectorAll(".sortable-item")).map(li => li.textContent);
+    const helyes = k.helyes;
+    items.forEach((val, i) => {
+      if (val === helyes[i]) document.querySelectorAll(".sortable-item")[i].classList.add("helyes");
+      else document.querySelectorAll(".sortable-item")[i].classList.add("helytelen");
     });
   }
 }
