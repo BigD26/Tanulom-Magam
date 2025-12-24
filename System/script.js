@@ -46,15 +46,12 @@ loadBtn.onclick = () => {
 startInput.addEventListener("input", () => {
   let v = parseInt(startInput.value);
   const max = currentSor.length;
-
   if (isNaN(v)) {
     startBtn.disabled = true;
     return;
   }
-
   if (v < 1) v = 1;
   if (v > max) v = max;
-
   startInput.value = v;
   startBtn.disabled = false;
 });
@@ -92,18 +89,14 @@ elozoBtn.onclick = () => {
 
 ujrakezdesBtn.onclick = () => {
   currentIndex = 0;
-
   ellenorizBtn.style.display = "inline-block";
   tovabbBtn.style.display = "inline-block";
   elozoBtn.style.display = "inline-block";
-
   startInput.style.display = "inline-block";
   startBtn.style.display = "inline-block";
   startLabel.style.display = "inline-block";
   endBtn.style.display = "inline-block";
-
   ujrakezdesBtn.style.display = "none";
-
   container.innerHTML = "";
   showQuestion(currentIndex);
 };
@@ -115,11 +108,9 @@ function showQuestion(index) {
 
   if (index >= currentSor.length) {
     container.innerHTML = "<strong>A kérdéssor vége</strong>";
-
     ellenorizBtn.style.display = "none";
     tovabbBtn.style.display = "none";
     elozoBtn.style.display = "none";
-
     ujrakezdesBtn.style.display = "block";
     return;
   }
@@ -142,22 +133,17 @@ function showQuestion(index) {
   if (k.tipus === "checkbox" || k.tipus === "radio") {
     let vals = [...k.valaszok];
     shuffleArray(vals);
-
     vals.forEach(v => {
       const lbl = document.createElement("label");
       lbl.className = "input_design";
-
       const inp = document.createElement("input");
       inp.type = k.tipus;
       inp.name = k.tipus === "checkbox" ? `q${index}[]` : `q${index}`;
       inp.value = v.replace(/<[^>]+>/g, '');
-
       lbl.appendChild(inp);
-
       const span = document.createElement("span");
       span.innerHTML = " " + v;
       lbl.appendChild(span);
-
       div.appendChild(lbl);
     });
   } else if (k.tipus === "text") {
@@ -202,15 +188,12 @@ function renderDragDrop(k, parent) {
     const el = document.createElement("div");
     el.className = "drag-item";
     el.textContent = text;
-
     el.draggable = true;
     el.ondragstart = e => e.dataTransfer.setData("text/plain", text);
-
     el.addEventListener("click", () => {
       document.querySelectorAll(".drag-item.selected").forEach(d => d.classList.remove("selected"));
       el.classList.add("selected");
     });
-
     dragRow.appendChild(el);
   });
 
@@ -219,17 +202,14 @@ function renderDragDrop(k, parent) {
     zone.className = "drop-zone";
     zone.dataset.helyes = Array.isArray(p.bal) ? JSON.stringify(p.bal) : JSON.stringify([p.bal]);
     zone.dataset.valaszok = "[]";
-
     const label = document.createElement("span");
     label.textContent = p.jobb;
     zone.appendChild(label);
-
     zone.ondragover = e => e.preventDefault();
     zone.ondrop = e => {
       e.preventDefault();
       moveToZone(zone, e.dataTransfer.getData("text/plain"));
     };
-
     zone.addEventListener("click", () => {
       const selected = document.querySelector(".drag-item.selected");
       if (selected) {
@@ -237,7 +217,6 @@ function renderDragDrop(k, parent) {
         selected.classList.remove("selected");
       }
     });
-
     dropRow.appendChild(zone);
   });
 
@@ -248,7 +227,6 @@ function renderDragDrop(k, parent) {
 
 function moveToZone(zone, val) {
   const dragRow = zone.parentElement.parentElement.querySelector(".drag-items");
-
   document.querySelectorAll(".drop-zone").forEach(z => {
     let l = JSON.parse(z.dataset.valaszok);
     if (l.includes(val)) {
@@ -256,7 +234,6 @@ function moveToZone(zone, val) {
       renderZone(z, dragRow);
     }
   });
-
   let lista = JSON.parse(zone.dataset.valaszok);
   if (!lista.includes(val)) lista.push(val);
   zone.dataset.valaszok = JSON.stringify(lista);
@@ -266,25 +243,20 @@ function moveToZone(zone, val) {
 function renderZone(zone, dragRow) {
   zone.querySelectorAll(".drop-value").forEach(e => e.remove());
   const lista = JSON.parse(zone.dataset.valaszok);
-
   lista.forEach(val => {
     const el = document.createElement("div");
     el.className = "drop-value";
     el.textContent = val;
-
     el.ondblclick = () => {
       zone.dataset.valaszok = JSON.stringify(lista.filter(v => v !== val));
       renderZone(zone, dragRow);
     };
-
     el.addEventListener("click", () => {
       zone.dataset.valaszok = JSON.stringify(lista.filter(v => v !== val));
       renderZone(zone, dragRow);
     });
-
     el.draggable = true;
     el.ondragstart = e => e.dataTransfer.setData("text/plain", val);
-
     zone.appendChild(el);
   });
 
@@ -310,6 +282,8 @@ function renderZone(zone, dragRow) {
 }
 
 /* ===== SORREND KÉRDÉS ===== */
+const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints;
+
 function renderSortOrder(k, parent) {
   const wrapper = document.createElement("div");
   wrapper.className = "sortable-wrapper";
@@ -324,19 +298,18 @@ function renderSortOrder(k, parent) {
     const li = document.createElement("li");
     li.className = "sortable-item";
     li.textContent = v;
-    li.draggable = true;
 
-    // Drag & drop desktop
+    // Desktop drag
+    li.draggable = true;
     li.addEventListener("dragstart", e => {
       e.dataTransfer.setData("text/plain", v);
       li.classList.add("dragging");
     });
-    li.addEventListener("dragend", e => {
-      li.classList.remove("dragging");
-    });
+    li.addEventListener("dragend", () => li.classList.remove("dragging"));
 
-    // Mobil kattintós sorrendváltás
+    // Mobil: kattintásos sorrend
     li.addEventListener("click", () => {
+      if (!isTouchDevice) return;
       const selected = list.querySelector(".selected");
       if (selected) {
         const currentIndex = Array.from(list.children).indexOf(li);
@@ -353,12 +326,12 @@ function renderSortOrder(k, parent) {
     list.appendChild(li);
   });
 
+  // Drag & drop rendezés desktopon
   list.addEventListener("dragover", e => {
     e.preventDefault();
     const afterElement = getDragAfterElement(list, e.clientY);
     const dragging = list.querySelector(".dragging");
     if (!dragging) return;
-
     if (afterElement == null) list.appendChild(dragging);
     else list.insertBefore(dragging, afterElement);
   });
