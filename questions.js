@@ -29,7 +29,14 @@ const kerdesek = [
         { bal: "RAM", jobb: "Ideiglenes memória" }
       ],
       kihagyhato: ["SSD", "HDD"]
+    },
+    {
+      szoveg: "Rendezd a következő számokat növekvő sorrendbe!",
+      tipus: "sorrend",
+      valaszok: ["3", "1", "4", "2"], // megjelenítendő elemek
+      helyes: ["1", "2", "3", "4"]    // helyes sorrend
     }
+
 
   ],
 
@@ -71,13 +78,38 @@ const kerdesek = [
       kep: null
     },
     {
-      szoveg: "Húzd a megfelelő fogalmakat a definíciókhoz!",
+      szoveg: "Párosítsd a Python sztring literálokat és értékeiket, ha e = 42, v = 42.16 és s = '4216'.",
       tipus: "dragdrop",
       parok: [
-        { bal: "CPU", jobb: "Központi feldolgozó egység" },
-        { bal: "RAM", jobb: "Ideiglenes memória" }
+        { bal: "'Hello 42!'", jobb: "f'Hello {e}!'" },
+        { bal: "'Hello 42.16!'", jobb: "f'Hello {v}!'" },
+        { bal: "'Hello 02a!'", jobb: "f'Hello {e:03x}!'" },
+        { bal: "'Hello _42_!'", jobb: "f'Hello {e:_^4}!'" }
       ],
-      kihagyhato: ["SSD", "HDD"]
-    }
+      kihagyhato: []
+    },
+    {
+      szoveg: "Mi a szintaxis?",
+      tipus: "radio",
+      valaszok: ["Az adott nyelvben érvényes jelsorozatokat definiáló szabályhalmaz.", "Egy program tervezésének első lépése.", "Ez adja meg, hogy az adott nyelven értelmes jelsorozatoknak mi a jelentése.", "Egy algoritmusnak egy adott programozási nyelven történő leírása."],
+      helyes: "Az adott nyelvben érvényes jelsorozatokat definiáló szabályhalmaz.",
+      kep: null
+    },
+    {
+      szoveg: "Mely állítás igaz a Python függvények argumentumátadásával kapcsolatban?",
+      tipus: "radio",
+      valaszok: ["Lehetnek olyan paraméterek, amelyek csak kulcsszavas argumentummal adhatóak meg.", "Minden függvénynek pontosan meghatározott számú paramétere van, és pontosan ennyi argumantummal kell meghívni.", "Minden paraméter értéke megadható kulcsszavas argumentumként.", "A kulcsszavas argumentumok meg kell, hogy előzzék a sorrendi argumentumokat."],
+      helyes: "Lehetnek olyan paraméterek, amelyek csak kulcsszavas argumentummal adhatóak meg.",
+      kep: null
+    },
+    {
+      szoveg: "Csoportosítsd a következő elemeket!",
+      tipus: "dragdrop",
+      parok: [
+        { bal: "CPU", jobb: "Hardver" },
+        { bal: ["PYTHON", "LINUX"], jobb: "Szoftver" },
+      ],
+      kihagyhato: ["PDF"]
+    },
   ]
 ];
