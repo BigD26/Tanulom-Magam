@@ -23,14 +23,17 @@ hr {
     display: block;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
 select option:checked {
-  background-color: #e0e2e5;
+    background-color: #e0e2e5;
 }
+
 option {
     background-color: #f0f2f5;
-}
-option:hover {
-    background-color: #e0e2e5;
+
+    &:hover {
+        background-color: #e0e2e5;
+    }
 }
 
 img {
@@ -51,28 +54,28 @@ img {
     background-color: #f8f9fb;
     border-radius: 10px;
     transition: 0.5s;
-}
-.input_design:hover {
-    background-color: #e0e2e5;
-    transition: 0.5s;
+
+    &:hover {
+        background-color: #e0e2e5;
+    }
 }
 
 .helyes {
     background-color: #c8e6c9;
     transition: 0.5s;
-}
-.helyes:hover {
-    background-color: #a5d6a7;
-    transition: 0.5s;
+
+    &:hover {
+        background-color: #a5d6a7;
+    }
 }
 
 .helytelen {
     background-color: #ffcdd2;
     transition: 0.5s;
-}
-.helytelen:hover {
-    background-color: #ef9a9a;;
-    transition: 0.5s;
+
+    &:hover {
+        background-color: #ef9a9a;
+    }
 }
 
 .text_input {
@@ -97,11 +100,14 @@ label {
     gap: 5px;
     justify-content: center;
 }
-.top_div input, .top_div select {
+
+.top_div input,
+.top_div select {
     width: 50%;
     text-align: center;
     border: 2px solid #333;
 }
+
 .top_btn {
     display: block;
     width: 30%;
@@ -111,12 +117,13 @@ label {
     transition: 0.5s;
     background-color: #f0f2f5;
     transition: 0.5s;
+
+    &:hover {
+        transform: translateX(-6px);
+        background-color: #e0e2e5;
+    }
 }
-.top_btn:hover {
-    transform: translateX(-6px);
-    background-color: #e0e2e5;
-    transition: 0.5s;
-}
+
 .end_btn {
     display: block;
     width: 20%;
@@ -145,11 +152,11 @@ label {
     height: 30px;
     transition: 0.5s;
     background-color: #f0f2f5;
-}
-.bottom_btn:hover {
-    transform: translateY(5px);
-    background-color: #e0e3e8;
-    transition: 0.5s;
+
+    &:hover {
+        transform: translateY(5px);
+        background-color: #e0e3e8;
+    }
 }
 
 .direction_btn {
@@ -160,114 +167,124 @@ label {
     * {
         margin: 0;
     }
+
     #main_div {
         margin: 20px auto;
         width: 90%;
         min-width: 300px;
     }
+
     img {
         height: auto;
     }
+
     #bottom_btn_div {
         gap: 5px;
     }
+
     .bottom_btn {
         width: 35%;
+
+        &:hover {
+            transform: none;
+            background-color: #e0e3e8;
+        }
     }
+
     .direction_btn {
         width: 25%;
     }
 }
 
 .dragdrop-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
 }
 
 /* FELSŐ SOR – húzható elemek */
 .drag-items {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 .drag-item {
-  padding: 10px 14px;
-  background: #eee;
-  border: 1px solid #999;
-  border-radius: 10px;
-  cursor: grab;
-  user-select: none;
-  font-weight: bold;
-  height: 25px;
-  min-width: 60px;
-  text-align: center;
+    padding: 10px 14px;
+    background: #eee;
+    border: 1px solid #999;
+    border-radius: 10px;
+    cursor: grab;
+    user-select: none;
+    font-weight: bold;
+    height: 25px;
+    min-width: 60px;
+    text-align: center;
 }
 
 /* ALSÓ SOR – tárolók */
 .drop-zones {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 /* EGY TÁROLÓ */
 .drop-zone {
-  width: auto;
-  min-width: 180px;
-  height: auto;
-  min-height: 100px;
-  border: 2px dashed #aaa;
-  padding: 8px;
-  box-sizing: border-box;
-  border-radius: 20px;
+    width: auto;
+    min-width: 180px;
+    height: auto;
+    min-height: 100px;
+    border: 2px dashed #aaa;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 20px;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
 
 /* TÁROLÓ FELIRAT – FELÜL */
 .drop-zone span {
-  font-size: 13px;
-  font-weight: bold;
-  margin-bottom: 6px;
-  text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 6px;
+    text-align: center;
 }
 
 /* BEHÚZOTT ELEM – KÖZÉPEN */
 .drop-value {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  padding: 10px 14px;
-  background: #eee;
-  border: 1px solid #999;
-  border-radius: 10px;
-  cursor: grab;
-  user-select: none;
-  font-weight: bold;
-  margin-bottom: 5px;
-  height: 25px;
-  min-width: 60px;
-  text-align: center;
+    padding: 10px 14px;
+    background: #eee;
+    border: 1px solid #999;
+    border-radius: 10px;
+    cursor: grab;
+    user-select: none;
+    font-weight: bold;
+    margin-bottom: 5px;
+    height: 25px;
+    min-width: 60px;
+    text-align: center;
 }
 
 /* KIÉRTÉKELÉS */
 .drop-zone.helyes {
-  border-color: green;
-  background: #eaffea;
+    border-color: green;
+    background: #eaffea;
 }
 
 .drop-zone.helytelen {
-  border-color: red;
-  background: #ffecec;
+    border-color: red;
+    background: #ffecec;
 }
 
 .sortable-list {
