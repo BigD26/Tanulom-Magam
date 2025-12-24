@@ -146,7 +146,7 @@ const kerdesek = [
     {
       szoveg: "Az alábbiak közül általánosan melyik állítás igaz az adattárolás mutable és immutable jellemzőire?",
       tipus: "radio",
-      valaszok: ["Az immutable értékre hivatkozó azonosító értéke az azonosítónak történő újabb értékadásig nem változhat meg.", "Egy immutable értékre hivatkozó azonosítónak a program futása során csak egyszer adhatunk értéket.", "A mutable értékek 'véletlenül' is megváltozhatnak, míg az immutable értékeket csak 'szándékosan' tudjuk megváltoztatni.", "Egy-egy minden másban megegyező mutable és immutable érték különböző típusúnak számít."],
+      valaszok: ["Az immutable értékre hivatkozó azonosító értéke az azonosítónak történő újabb értékadásig nem változhat meg.", "Egy immutable értékre hivatkozó azonosítónak a program futása során csak egyszer adhatunk értéket.", "A mutable értékek \"véletlenül\" is megváltozhatnak, míg az immutable értékeket csak \"szándékosan\" tudjuk megváltoztatni.", "Egy-egy minden másban megegyező mutable és immutable érték különböző típusúnak számít."],
       helyes: "Az immutable értékre hivatkozó azonosító értéke az azonosítónak történő újabb értékadásig nem változhat meg.",
       kep: null
     },
@@ -299,7 +299,7 @@ const kerdesek = [
       kep: null
     },
     {
-      szoveg: "Tegye sorrendbe a függvényhívás végrehajtásának technikai lépésit!",
+      szoveg: "Tegye sorrendbe a függvényhívás végrehajtásának technikai lépéseit!",
       tipus: "sorrend",
       valaszok: ["Függvényhívás argumentumainak kiértékelése.", "Argumentumok értékének átadása a függvény paraméterei részére.", "Visszatérési érték kiszámítása.", "Vezérlés visszaadása a hívó félnek."],
       helyes: ["Függvényhívás argumentumainak kiértékelése.", "Argumentumok értékének átadása a függvény paraméterei részére.", "Visszatérési érték kiszámítása.", "Vezérlés visszaadása a hívó félnek."]
@@ -418,7 +418,7 @@ const kerdesek = [
       kep: null
     },
     {
-      szoveg: "Hogyan lehet megkapni egy container nevű dictionary (dict) értékeit egy x változóban Python-ban?",
+      szoveg: "Hogyan lehet megkapni egy container nevű dictionary (dict) kulcsait egy x változóban Python-ban?",
       tipus: "radio",
       valaszok: ["for i in container:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x = container[i]", "for x in container:", "for i in range(len(container)):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x = container[i]", "for x in range(len(container)):"],
       helyes: "for x in container:",
@@ -461,6 +461,78 @@ const kerdesek = [
         { bal: "{1:3, -1:1}", jobb: "{a - 2: a for a in {-3, -1, 1, 3} if a > 0}" }
       ],
       kihagyhato: []
+    },
+    {
+      szoveg: "Hogyan lehet megkapni egy container nevű dictionary (dict) elemeit egy x változóban Python-ban?",
+      tipus: "radio",
+      valaszok: ["for i in container:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x = container[i]", "for x in container:", "for i in range(len(container)):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x = container[i]", "for x in range(len(container)):"],
+      helyes: "for x in container:",
+      kep: null
+    },
+    {
+      szoveg: "Mire jó a Python with utasítása/környezete?",
+      tipus: "radio",
+      valaszok: ["Az utasítás \"magjában\" valamely erőforrást tudunk biztonságosan használni, és ennek lezárásával nem kell külön foglalkoznunk.", "Ez az utasítás nyitja meg a fájlokat és adja vissza őkez az <b>as</b> kulcsszó után megadott néven.", "Végigiterál a megnyitott fájlon, és egyenként visszaadja annak a sorait az <b>as</b> kulcsszó után megadott változóban.", "Ez az utasítás zárja le a fájlokat."],
+      helyes: "Az utasítás \"magjában\" valamely erőforrást tudunk biztonságosan használni, és ennek lezárásával nem kell külön foglalkoznunk.",
+      kep: null
+    },
+    {
+      szoveg: "Csoportosítsd a következő elemeket!",
+      tipus: "dragdrop",
+      parok: [
+        { bal: ["CPU", "SSD"], jobb: "Hardver" },
+        { bal: "BIOS", jobb: "Szoftver" }
+      ],
+      kihagyhato: ["PDF"]
+    },
+    {
+      szoveg: "Melyik állítás a leginkább igaz a fájlok használatával kapcsolatban a programírás tekintetében?",
+      tipus: "radio",
+      valaszok: ["Egy fájl tartalmát általában folyamatában dolgozunk fel, és a fájlműveletek működése ehhez igazodik.", "Egy fájlt szöveges bináris és vegyes módban is meg tudunk nyitni.", "Egy szöveges fájlt könnyű egy tetszőleges sorszámú sor elejétől kezdve feldolgozni.", "A fájl tartalma határozza meg, hogy bináris vagy szöveges módban lehet-e megnyitni."],
+      helyes: "Egy fájl tartalmát általában folyamatában dolgozunk fel, és a fájlműveletek működése ehhez igazodik.",
+      kep: null
+    },
+    {
+      szoveg: "Párosítsd a Python sztring literálokat és értékeiket, ha e = 42, v = 42.16 és s = '4216'.",
+      tipus: "dragdrop",
+      parok: [
+        { bal: "'Hello 42!'", jobb: "f'Hello {e}!'" },
+        { bal: "'Hello 42.2!'", jobb: "f'Hello {v:_.1f}!'" },
+        { bal: "'Hello _42_!'", jobb: "f'Hello {s:_^4.2s}!'" },
+        { bal: "'Hello 4216'", jobb: "f'Hello {s:_^4.4s}!'" }
+      ],
+      kihagyhato: []
+    },
+    {
+      szoveg: "Mely állítás igaz a Python függvények argumentumátadásával kapcsolatban?",
+      tipus: "radio",
+      valaszok: ["Lehetőség van tetszőleges (előre nem definiált) számú sorrendi argumentum kezelésére.", "Minden paraméter értéke megadható kulcsszavas argumentumként.", "A kulcsszavas argumentumok meg kell, hogy előzzék a sorrendi argumentumokat.", "A paraméterlistában vegyesen lehetnek default értékekkel ellátott és default érték nélküli paraméterek."],
+      helyes: "Lehetőség van tetszőleges (előre nem definiált) számú sorrendi argumentum kezelésére.",
+      kep: null
+    },
+    {
+      szoveg: "Párosítsd a Python slicing kifejezéseket az előálló értékekkel, ha C = [1, 3, 5, 7, 9]. (1 elemnek nincs párja.)",
+      tipus: "dragdrop",
+      parok: [
+        { bal: "[1, 3, 5, 7, 9]", jobb: "C[::]" },
+        { bal: "[1, 3, 5, 7]", jobb: "C[:-1]" },
+        { bal: "[9, 7, 5]", jobb: "C[-1:1:-1]" }
+      ],
+      kihagyhato: []
+    },
+    {
+      szoveg: "Az alábbiak közül általánosan melyik állítás igaz az adattárolás konstans és változó fogalmaira?",
+      tipus: "radio",
+      valaszok: ["Egy változóazonosító megkaphatja egy konstans azonosító értékét, és ez fordítva is lehetséges.", "Egy konstans azonosítóhoz a program futása során nem rendelhetünk értéket.", "Egy konstans azonosító által hivatkozott érték a program futása során semmilyen körülmények között nem változhat meg.", "Egy konstans azonosító megkaphatja egy változó értékét, de ez fordítva nem lehetséges."],
+      helyes: "Egy változóazonosító megkaphatja egy konstans azonosító értékét, és ez fordítva is lehetséges.",
+      kep: null
+    },
+    {
+      szoveg: "Milyen vezérlési szerkezetek megvalósítása látható az alábbi kódban: (2 helyes válasz van, a többi hamis.)",
+      tipus: "checkbox",
+      valaszok: ["Eljárásvezérlés", "Függvényvezérlés", "Kezdőfeltételes ismétléses vezérlés", "Számlálásos ismétléses vezérlés", "Diszkrét ismétléses vezérlés"],
+      helyes: ["Eljárásvezérlés", "Függvényvezérlés"],
+      kep: "program4.png"
     },
   ]
 ];
