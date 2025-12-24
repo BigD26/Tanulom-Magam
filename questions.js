@@ -353,5 +353,114 @@ const kerdesek = [
       helyes: ["Szekvenciális vezérlés", "Kezdőfeltételes ismétléses vezérlés"],
       kep: "program3.png"
     },
+    {
+      szoveg: "Mit írhat elő leginkább a szekvenciális vezérlés?",
+      tipus: "radio",
+      valaszok: ["Az algoritmus lépéseinek megadott sorrendben történő egyszeri végrehajtását.", "Az algoritmus lépéseinek megadott sorrendben történő többszöri végrehajtását.", "Egy kifejezés értéke alapján több utasítás közül az egyik végrehajtását.", "Egy utasítás különböző értékekre történő végrehajtását."],
+      helyes: "Az algoritmus lépéseinek megadott sorrendben történő egyszeri végrehajtását.",
+      kep: null
+    },
+    {
+      szoveg: "Mire jó a Python input() függvénye?",
+      tipus: "radio",
+      valaszok: ["A standard bemenetről lehet vele kizárólag sztringeket beolvastatni.", "A standard bemenetről lehet vele számokat beolvastatni.", "Olvasásra megnyitott fájlokból tudunk vele sorokat beolvasni.", "Írásra megnyitott fájlokba is lehet a segítségével adatot írni."],
+      helyes: "A standard bemenetről lehet vele kizárólag sztringeket beolvastatni.",
+      kep: null
+    },
+    {
+      szoveg: "Az alábbiak közül általánosan melyik állítás igaz az adattárolás konstans és változó fogalmaira?",
+      tipus: "radio",
+      valaszok: ["Egy változóazonosító megkaphatja egy konstans azonosító értékét, és ez fordítva is lehetséges.", "Egy konstans azonosítóhoz a program futása során nem rendelhetünk értéket.", "Egy konstans azonosító által hivatkozott érték a program futása során semmilyen körülmények között nem változhat meg.", "Egy konstans azonosító megkaphatja egy változó értékét, de ez fordítva nem lehetséges."],
+      helyes: "Egy változóazonosító megkaphatja egy konstans azonosító értékét, és ez fordítva is lehetséges.",
+      kep: null
+    },
+    {
+      szoveg: "Tegye sorrendbe a függvényhívás végrehajtásának technikai lépésit!",
+      tipus: "sorrend",
+      valaszok: ["Függvényhívás argumentumainak kiértékelése.", "Vezérlés átadása a hívott függvénynek.", "Függvény utasításainak végrehajtása.", "Vezérlés visszaadása a hívó félnek."],
+      helyes: ["Függvényhívás argumentumainak kiértékelése.", "Vezérlés átadása a hívott függvénynek.", "Függvény utasításainak végrehajtása.", "Vezérlés visszaadása a hívó félnek."]
+    },
+    {
+      szoveg: "Minek a definíciója a következő: A program olyan komponense, amely műveletek hatására tetszőleges értéket felvehet, és értékét a program végrehajtása során akárhányszor módosíthatjuk?",
+      tipus: "radio",
+      valaszok: ["Változó", "Literál", "Konstans", "Függvény"],
+      helyes: "Változó",
+      kep: null
+    },
+    {
+      szoveg: "Melyik állítás a leginkább igaz a fájlok használatával kapcsolatban a programírás tekintetében?",
+      tipus: "radio",
+      valaszok: ["Egy fájlt egy megnyitáskor szöveges vagy bináris módban tudunk megnyitni, vegyes módban nem.", "A fájlokat mindig eltérő hosszú, karakterekből álló sorok sorozatának tekintjük.", "A fájlokat mindig azonos hosszú, bájtokból álló sorozatok listájának tekintjük.", "Egy fájlt egy adott alkalommal vagy csak írásra, vagy csak olvasásra tudunk megnyitni."],
+      helyes: "Egy fájlt egy megnyitáskor szöveges vagy bináris módban tudunk megnyitni, vegyes módban nem.",
+      kep: null
+    },
+    {
+      szoveg: "Csoportosítsd a következő elemeket!",
+      tipus: "dragdrop",
+      parok: [
+        { bal: "RAM", jobb: "Hardver" },
+        { bal: ["JPEG", "BIOS"], jobb: "Szoftver" }
+      ],
+      kihagyhato: ["PDF"]
+    },
+    {
+      szoveg: "Mely állítások igazak a Python float adattípusára? (2 helyes válasz van, a többi hamis.)",
+      tipus: "checkbox",
+      valaszok: ["Az értékkészlete korlátozott, van egy legkisebb és egy legnagyobb ábrázolható értéke.", "Nem képes ábrázolni az absztrakt adattípusához tartozó minden egyes értéket.", "Értékkészlete összetett értékekből áll.", "Az értékkészlet tartományán belül bármely érték tárolására képes.", "Lehetséges értékei a <b>False</b> és a <b>True</b>."],
+      helyes: ["Az értékkészlete korlátozott, van egy legkisebb és egy legnagyobb ábrázolható értéke.", "Nem képes ábrázolni az absztrakt adattípusához tartozó minden egyes értéket."],
+      kep: null
+    },
+    {
+      szoveg: "Mely állítás igaz a Python függvények argumentumátadásával kapcsolatban?",
+      tipus: "radio",
+      valaszok: ["Lehetnek olyan paraméterek, amelyek csak kulcsszavas argumentummal adhatóak meg.", "A függvény paraméterei kizárólag az argumentumok sorrendje alapján kapják meg az értékeiket.", "Minden paraméter értéke megadható kulcsszavas argumentumként.", "A kulcsszavas argumentumok meg kell, hogy előzzék a sorrendi argumentumokat."],
+      helyes: "Lehetnek olyan paraméterek, amelyek csak kulcsszavas argumentummal adhatóak meg.",
+      kep: null
+    },
+    {
+      szoveg: "Hogyan lehet megkapni egy container nevű dictionary (dict) értékeit egy x változóban Python-ban?",
+      tipus: "radio",
+      valaszok: ["for i in container:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x = container[i]", "for x in container:", "for i in range(len(container)):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x = container[i]", "for x in range(len(container)):"],
+      helyes: "for x in container:",
+      kep: null
+    },
+    {
+      szoveg: "Mi a szemantika?",
+      tipus: "radio",
+      valaszok: ["Ez adja meg, hogy az adott nyelven értelmes jelsorozatoknak mi a jelentése.", "Az az egység, amelyet az értékkészlet és a műveletek határoznak meg.", "Egy algoritmusnak egy adott programozási nyelven történő leírása.", "Szabályok összessége, mely leírja, hogy egy adott nyelvben mik az érvényes jelsorozatok."],
+      helyes: "Ez adja meg, hogy az adott nyelven értelmes jelsorozatoknak mi a jelentése.",
+      kep: null
+    },
+    {
+      szoveg: "A szoftverfejlesztési folyamatok mely lépésében hozzuk létre a problémát megoldó algoritmust?",
+      tipus: "radio",
+      valaszok: ["Algoritmustervezés", "Specifikáció", "Megvalósítás", "Fenntartás"],
+      helyes: "Algoritmustervezés",
+      kep: null
+    },
+    {
+      szoveg: "Mit ad meg egy nyelv szemantikája?",
+      tipus: "radio",
+      valaszok: ["Többek között azt, hogy egy nyelvben mire lehet a kulcsszavakat használni.", "Azt, hogy a szövegszerkesztőben milyen színnel jelenjenek meg az egyes elemek.", "Például, hogy milyen előre megírt függvényeket használhatunk.", "Azt, hogy mik a nyelvben érvényes jelsorozatok."],
+      helyes: "Többek között azt, hogy egy nyelvben mire lehet a kulcsszavakat használni.",
+      kep: null
+    },
+    {
+      szoveg: "Mely állítás igaz a Python függvények argumentumátadásával kapcsolatban?",
+      tipus: "radio",
+      valaszok: ["Lehetőség van tetszőleges (előre nem definiált) kulcsszavas argumentumok kezelésére.", "Minden függvénynek pontosan meghatározott számú paramétere van, és pontosan ennyi argumentummal kell meghívni.", "Minden paraméter értéke megadható kulcsszavas argumentumként.", "A paraméterlistában vegyesen lehetnek default értékekkel ellátott és default érték nélküli paraméterek."],
+      helyes: "Lehetőség van tetszőleges (előre nem definiált) kulcsszavas argumentumok kezelésére.",
+      kep: null
+    },
+    {
+      szoveg: "Párosítsd a Python comprehension kifejezéseket az előálló értékekkel. (1 elemnek nincs párja.)",
+      tipus: "dragdrop",
+      parok: [
+        { bal: "[-1, 1]", jobb: "[a - 2 for a in [-3, -1, 1, 3] if a > 0]" },
+        { bal: "{-1}", jobb: "{a - 2 for a in {-3: -1, 1: 3} if a > 0}" },
+        { bal: "{1:3, -1:1}", jobb: "{a - 2: a for a in {-3, -1, 1, 3} if a > 0}" }
+      ],
+      kihagyhato: []
+    },
   ]
 ];
