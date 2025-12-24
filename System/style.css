@@ -39,8 +39,11 @@ img {
     display: block;
     border: 2px dashed #333;
     border-radius: 20px;
-    height: 250px;
     box-shadow: 8px 8px 8px #9d9e9d98;
+    height: auto;
+    width: auto;
+    max-height: 250px;
+    max-width: 80%;
 }
 
 .input_design {
@@ -153,13 +156,17 @@ label {
 }
 
 @media (max-width: 600px) {
+    * {
+        margin: 0;
+    }
     #main_div {
-        margin: 50px auto;
-        width: 80%;
+        margin: 0;
+        border-radius: 0;
+        width: 100%;
         min-width: 300px;
     }
     img {
-        height: 180px;
+        height: auto;
     }
     #bottom_btn_div {
         gap: 5px;
@@ -170,4 +177,95 @@ label {
     .direction_btn {
         width: 25%;
     }
+}
+
+.dragdrop-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+/* FELSŐ SOR – húzható elemek */
+.drag-items {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.drag-item {
+  padding: 10px 14px;
+  background: #eee;
+  border: 1px solid #999;
+  border-radius: 10px;
+  cursor: grab;
+  user-select: none;
+  font-weight: bold;
+  height: 25px;
+  min-width: 60px;
+  text-align: center;
+}
+
+/* ALSÓ SOR – tárolók */
+.drop-zones {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* EGY TÁROLÓ */
+.drop-zone {
+  width: auto;
+  min-width: 180px;
+  height: auto;
+  min-height: 100px;
+  border: 2px dashed #aaa;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* TÁROLÓ FELIRAT – FELÜL */
+.drop-zone span {
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+/* BEHÚZOTT ELEM – KÖZÉPEN */
+.drop-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 14px;
+  background: #eee;
+  border: 1px solid #999;
+  border-radius: 10px;
+  cursor: grab;
+  user-select: none;
+  font-weight: bold;
+  margin-bottom: 5px;
+  height: 25px;
+  min-width: 60px;
+  text-align: center;
+}
+
+/* KIÉRTÉKELÉS */
+.drop-zone.helyes {
+  border-color: green;
+  background: #eaffea;
+}
+
+.drop-zone.helytelen {
+  border-color: red;
+  background: #ffecec;
 }
