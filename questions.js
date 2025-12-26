@@ -628,5 +628,55 @@ const kerdesek = [
       ],
       kihagyhato: []
     },
+    {
+      szoveg: "Mely állítások igazak a Python tuple adattípusára? (2 helyes válasz van, a többi hamis.)",
+      tipus: "checkbox",
+      valaszok: ["A <b>%</b> operátor nem értelmezett az értékein.", "A <b>-</b> operátor is értelmezett az értékein.", "Az <b>and</b> és <b>or</b> operátorok nem értelmezettek az értékein.", "Bármely (látszólag) értékmódosító művelete egy új értéket hoz létre.", "Egy adott értékének elemei módosíthatóak az <b>[]</b> operátor és az értékadás művelet segítségével."],
+      helyes: ["A % operátor nem értelmezett az értékein.", "Bármely (látszólag) értékmódosító művelete egy új értéket hoz létre."],
+      kep: null
+    },
+    {
+      szoveg: "Tegye sorrendbe a függvényhívás végrehajtásának technikai lépésit!",
+      tipus: "sorrend",
+      valaszok: ["Argumentumok értékének átadása a függvény paraméterei részére.", "Vezérlés átadása a hívott függvénynek.", "A függvény lokális változóinak törlése", "Vezérlés visszaadása a hívó félnek."],
+      helyes: ["Argumentumok értékének átadása a függvény paraméterei részére.", "Vezérlés átadása a hívott függvénynek.", "A függvény lokális változóinak törlése", "Vezérlés visszaadása a hívó félnek."]
+    },
+    {
+      szoveg: "Hogyan használhatjuk Python-ban az f fájlt, ha az f = open('random.txt', 'rt') utasítással nyitottuk meg? (2 helyes válasz van, a többi hamis.)",
+      tipus: "checkbox",
+      valaszok: ["Használhatjuk a <b>for l in f:</b> utasítást, ami végigiterál a fájl sorain (amiket az 1 változóban egyenként kapunk meg).", "Használhatjuk az <b>print(v, file=f)</b> függvényhívást, ami a <b>v</b> változót és egy sorvége karaktert ír ki a fájlba.", "Használhatjuk az <b>f.read()</b> metódushívást, ami a fájl teljes tartalmát adja vissza sorok (sztringek) listájaként.", "Használhatjuk az <b>f.close()</b> metódushívást, ami lezárja a fájlt.", "Használhatjuk az <b>f.readlines()</b> metódushívást, ami a fájl teljes tartalmát adja vissza egyetlen sztringként."],
+      helyes: ["Használhatjuk a for l in f: utasítást, ami végigiterál a fájl sorain (amiket az 1 változóban egyenként kapunk meg).", "Használhatjuk az f.close() metódushívást, ami lezárja a fájlt."],
+      kep: null
+    },
+    {
+      szoveg: "Mely állítások igazak a Python set adattípusára? (2 helyes válasz van, a többi hamis.)",
+      tipus: "checkbox",
+      valaszok: ["Jól használható tetszőleges számlálásos vezérlés megvalósítására.", "Egy adott értékének elemeit nem tárolja el egyszerre.", "Értékkészlete összetett értékekből áll.", "Az értékkészletét egész számok számtani sorozatai alkotják.", "Egy adott értéke nem tartalmazhat változtatható értékeket."],
+      helyes: ["Egy adott értékének elemeit nem tárolja el egyszerre.", "Egy adott értéke nem tartalmazhat változtatható értékeket."],
+      kep: null
+    },
+    {
+      szoveg: "Mely állítások igazak a Python range adattípusára? (2 helyes válasz van, a többi hamis.)",
+      tipus: "checkbox",
+      valaszok: ["Értékkészlete elemi értékekből áll.", "Az értékkészletét egész számok számtani sorozatai alkotják.", "Az értékkészletét tetszőleges értékekből álló sorozatok alkotják.", "Egy adott értékének hossza/mérete a gyakorlatban a rendelkezésre álló memória által érdemben korlátozott.", "Az értékkészletét azonos típusú értékekből álló sorozatok alkotják."],
+      helyes: ["Az értékkészletét egész számok számtani sorozatai alkotják.", "Az értékkészletét azonos típusú értékekből álló sorozatok alkotják."],
+      kep: null
+    },
+    {
+      szoveg: "A rekurzió nem csak függvényekre, hanem eljárásokra is működik, mert a függvény visszatérési értékét mindenképpen fel kell használnunk a rekurzív lépés során.",
+      tipus: "radio",
+      valaszok: ["(nincs válasz)", "Egyik állítás sem igaz.", "Az első állítás igaz, a második hamis.", "Az első állítás hamis, a második igaz.", "Mindkét állítás igaz, de nincs összefüggés köztük.", "Mindkét állítás igaz, és összefüggés van köztük."],
+      helyes: "Az első állítás igaz, a második hamis.",
+      kep: null
+    },
+    {
+      szoveg: "Mely problémákat nem ajánlott rekurzióval megoldani, illetve melyeket érdemesebb vagy nem rosszabb rekurzívan, mint nem rekurzívan megoldani? (A válasz nem feltétlenül esik egybe azzal, ahogyan az előadáson megoldottuk az egyes problémákat!)",
+      tipus: "dragdrop",
+      parok: [
+        { bal: ["Csúszóátlag számítás", "Prímszámok meghatározása adott n-ig", "n alatt k kiszámítása", "n! (n faktoriális) kiszámítása"], jobb: "Nem ajánlott rekurzióval megoldani" },
+        { bal: [], jobb: "Érdemes, vagy nem kifejezetten rossz a rekurzió" }
+      ],
+      kihagyhato: []
+    },
   ]
 ];
