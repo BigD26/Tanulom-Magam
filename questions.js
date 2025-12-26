@@ -576,5 +576,57 @@ const kerdesek = [
       helyes: "Valamilyen formálisabb (pl. matematikai) nyelven megfogalmazzuk a problémát.",
       kep: null
     },
+    {
+      szoveg: "Mi a szemantika?",
+      tipus: "radio",
+      valaszok: ["Az adott nyelven szabályos jelsorozatok értelmezését adja meg.", "Az az egység, amelyet az értékkészlet és a műveletek határoznak meg.", "Szabályok összessége, mely leírja, hogy egy adott nyelvben mik az érvényes jelsorozatok.", "Adott típusú összes feladat megoldására vonatkozó pontos előírás."],
+      helyes: "Az adott nyelven szabályos jelsorozatok értelmezését adja meg.",
+      kep: null
+    },
+    {
+      szoveg: "Mire jó a Python input() függvénye?",
+      tipus: "radio",
+      valaszok: ["A standard bemenetről lehet vele kizárólag sztringeket beolvastatni.", "A standard bemenetről lehet vele számokat beolvastatni.", "Egy másik modulban (.py fájlban) található függvényeket tudunk használni a segítségével.", "Írásra megnyitott fájlokba is lehet a segítségével adatot írni."],
+      helyes: "A standard bemenetről lehet vele kizárólag sztringeket beolvastatni.",
+      kep: null
+    },
+    {
+      szoveg: "Milyen tevékenységek nem kifejezetten szoftverfejlesztési feladatok?",
+      tipus: "radio",
+      valaszok: ["Hiba okának megkeresése.", "Annak ellenőrzése, hogy a program elég gyors és könnyen használható-e.", "A program forráskódjának átnézése.", "Program futtatása általános adatokkal."],
+      helyes: "Hiba okának megkeresése.",
+      kep: null
+    },
+    {
+      szoveg: "Milyen vezérlési szerkezetek megvalósítása látható az alábbi kódban: (2 helyes válasz van, a többi hamis.)",
+      tipus: "checkbox",
+      valaszok: ["Számlálásos ismétléses vezérlés", "Függvényvezérlés", "Végfeltételes ismétléses vezérlés", "Szekvenciális vezérlés", "Egyszerű szelekciós vezérlés"],
+      helyes: ["Szekvenciális vezérlés", "Egyszerű szelekciós vezérlés"],
+      kep: "program3.png"
+    },
+    {
+      szoveg: "Mit írhat elő leginkább a szekvenciális vezérlés?",
+      tipus: "radio",
+      valaszok: ["Egy utasítás megadott számú ismétlését.", "Egy előre megadott részalgoritmus alkalmazását valamilyen adatokra.", "Az algoritmus lépéseinek megadott sorrendben történő egyszeri végrehajtását.", "Egy utasítás valamilyen feltételhez kötött többszöri ismétlését."],
+      helyes: "Az algoritmus lépéseinek megadott sorrendben történő egyszeri végrehajtását.",
+      kep: null
+    },
+    {
+      szoveg: "Mely állítások igazak a Python int adattípusára? (2 helyes válasz van, a többi hamis.)",
+      tipus: "checkbox",
+      valaszok: ["A <b>/</b> operátor <b>int</b> típusú eredménye a maradékos osztás hányadosa.", "A <b>-</b> operátor is értelmezett az értékein.", "A kisebb-nagyobb relációs operátorok nem értelmezettek az értékein.", "Az <b>and</b> és <b>or</b> operátorok nem értelmezettek az értékein.", "A <b>/</b> operátor is értelmezett az értékein."],
+      helyes: ["A - operátor is értelmezett az értékein.", "A / operátor is értelmezett az értékein."],
+      kep: null
+    },
+    {
+      szoveg: "Párosítsd a Python slicing kifejezéseket az előálló értékekkel, ha C = [1, 3, 5, 7, 9]. (1 elemnek nincs párja.)",
+      tipus: "dragdrop",
+      parok: [
+        { bal: "[9, 7, 5]", jobb: "C[-1:1:-1]" },
+        { bal: "[1, 5, 9]", jobb: "C[0::2]" },
+        { bal: "[3, 7]", jobb: "C[1::2]" }
+      ],
+      kihagyhato: []
+    },
   ]
 ];
