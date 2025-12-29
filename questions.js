@@ -671,5 +671,74 @@ const kerdesek = [
       ],
       kihagyhato: []
     },
+    {
+      szoveg: "★ Mely állítások igazak a Python tuple adattípusára? (2 helyes válasz van, a többi hamis.)",
+      tipus: "checkbox",
+      valaszok: ["A <b>-</b> operátor is értelmezett az értékein.", "A <b>not</b> operátor is értelmezett az értékein.", "A <b>+</b> és <b>*</b> operátorok is értelmezettek az értékein.", "A kisebb-nagyobb relációs operátorok nem értelmezettek az értékein.", "Egy adott értékének elemei módosíthatóak az <b>[]</b> operátor és az értékadás művelet segítségével."],
+      helyes: ["A not operátor is értelmezett az értékein.", "A + és * operátorok is értelmezettek az értékein."],
+      kep: null
+    },
+    {
+      szoveg: "?★ Mely állítások igazak a Python int adattípusára? (2 helyes válasz van, a többi hamis.)",
+      tipus: "checkbox",
+      valaszok: ["Értékkészlete elemi értékekből áll.", "Az értékkészlete korlátozott, van egy legkisebb és egy legnagyobb ábrázolható értéke.", "Nem képes ábrázolni az absztrakt addattípusához tartozó minden egyes értéket.", "Értékkészlete összetett értékekből áll.", "Lehetséges értékei az egész számok."],
+      helyes: ["Értékkészlete elemi értékekből áll.", "Lehetséges értékei az egész számok."],
+      kep: null
+    },
+    {
+      szoveg: "★★ Párosítsd a Python sztring literálokat és értékeiket, ha e = 42, v = 42.16 és s = '4216'.",
+      tipus: "dragdrop",
+      parok: [
+        { bal: "'Hello 42!'", jobb: "f'Hello {e}!'" },
+        { bal: "'Hello 42.16!'", jobb: "f'Hello {v}!'" },
+        { bal: "'Hello 4216!'", jobb: "f'Hello {s}!'" },
+        { bal: "'Hello 02a!'", jobb: "f'Hello {e:03x}!'" }
+      ],
+      kihagyhato: []
+    },
+    {
+      szoveg: "★★ Mit írhat elő leginkább a szelekciós vezérlés?",
+      tipus: "radio",
+      valaszok: ["Értékek kiszámítását valamely előre megadott részalgoritmus alkalmazása segítségével.", "Egy utasítás megadott számú ismétlését.", "Az algoritmus lépéseinek megadott sorrendben történő többszöri végrehajtását.", "Két utasítás közül valamilyen feltétel alapján az egyik végrehajtását."],
+      helyes: "Két utasítás közül valamilyen feltétel alapján az egyik végrehajtását.",
+      kep: null
+    },
+    {
+      szoveg: "★★ Mely állítás igaz a Python függvények argumentumátadásával kapcsolatban?",
+      tipus: "radio",
+      valaszok: ["Lehetnek olyan paraméterek, amelyek csak kulcsszavas argumentummal adhatóak meg.", "A kulcsszavas argumentumok meg kell, hogy előzzék a sorrendi argumentumokat.", "Minden függvénynek pontosan meghatározott számú paramétere van, és pontosan ennyi argumentummal kell meghívni.", "A sorrendi és kulcsszavas argumentumok teljesen vegyesen használhatóak."],
+      helyes: "Lehetnek olyan paraméterek, amelyek csak kulcsszavas argumentummal adhatóak meg.",
+      kep: null
+    },
+    {
+      szoveg: "★ Csoportosítsd a következő elemeket!",
+      tipus: "dragdrop",
+      parok: [
+        { bal: ["HDD", "ROM"], jobb: "Hardver" },
+        { bal: "BIOS", jobb: "Szoftver" },
+      ],
+      kihagyhato: ["PDF"]
+    },
+    {
+      szoveg: "★ Milyen vezérlési szerkezetek megvalósítása látható az alábbi kódban: (2 helyes válasz van, a többi hamis.)",
+      tipus: "checkbox",
+      valaszok: ["Végfeltételes ismétléses vezérlés", "Egyszerű szelekciós vezérlés", "Kezdőfeltételes ismétléses vezérlés", "Eljárásvezérlés", "Diszkrét ismétléses vezérlés"],
+      helyes: ["Egyszerű szelekciós vezérlés", "Kezdőfeltételes ismétléses vezérlés"],
+      kep: "program2.png"
+    },
+    {
+      szoveg: "★★ Mikor és milyen hatása van a continue utasításnak Python-ban?",
+      tipus: "radio",
+      valaszok: ["Egy ciklusban végrehajtva az adott iteráció további lépéseit átugorjuk, de  a ciklus maga folytatódik.", "A break utasítás várakozás nélkül ennek az utasításnak adja át a vezérlést.", "Egy ciklusban végrehajtva a ciklus befejeződik, és a ciklushoz tartozó else ágra ugrik a vezérlés.", "A break utasítás által okozott végrehajtás-felfüggesztésből lehet vele folytatni a program végrehajtását."],
+      helyes: "Egy ciklusban végrehajtva az adott iteráció további lépéseit átugorjuk, de  a ciklus maga folytatódik.",
+      kep: null
+    },
+    {
+      szoveg: "★★ Az alábbiak közül általánosan melyik állítás igaz az adattárolás konstans és változó fogalmaira?",
+      tipus: "radio",
+      valaszok: ["Egy változóazonosítóhoz a program futása során akárhányszor új értéket rendelhetünk.", "Egy változóazonosító nem kaphatja meg egy konstans azonosító értékét, és fordítva sem lehetséges az értékadás.", "Egy változóazonosító megkaphatja egy konstans azonosító értékét, de ez fordítva nem lehetséges.", "Egy konstans azonosító által hivatkozott érték a program futása során semmilyen körülmények között nem változhat meg."],
+      helyes: "Egy változóazonosítóhoz a program futása során akárhányszor új értéket rendelhetünk.",
+      kep: null
+    },
   ]
 ];
