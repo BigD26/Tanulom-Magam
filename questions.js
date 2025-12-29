@@ -1,43 +1,4 @@
 const kerdesek = [
-  [ // MINTA KÉRDÉSSOR
-    "Minta kérdések",
-    {
-      szoveg: "Melyik állatok emlősök? (Több is lehet)",
-      tipus: "checkbox",
-      valaszok: ["Kutya", "Krokodil", "Macska", "Varjú"],
-      helyes: ["Kutya", "Macska"],
-      kep: "sample.jpg"
-    },
-    {
-      szoveg: "Melyik bolygó a Naprendszerben a harmadik?",
-      tipus: "radio",
-      valaszok: ["Merkúr", "Föld", "Mars", "Vénusz"],
-      helyes: "Föld",
-      kep: null
-    },
-    {
-      szoveg: "Írd be a víz képletét:",
-      tipus: "text",
-      helyes: "H2O",
-      kep: null
-    },
-    {
-      szoveg: "Húzd a megfelelő fogalmakat a definíciókhoz!",
-      tipus: "dragdrop",
-      parok: [
-        { bal: "CPU", jobb: "Központi feldolgozó egység" },
-        { bal: "RAM", jobb: "Ideiglenes memória" }
-      ],
-      kihagyhato: ["SSD", "HDD"]
-    },
-    {
-      szoveg: "Rendezd a következő számokat növekvő sorrendbe!",
-      tipus: "sorrend",
-      valaszok: ["3", "1", "4", "2"], // megjelenítendő elemek
-      helyes: ["1", "2", "3", "4"]    // helyes sorrend
-    }
-  ],
-
   [
     "Programozás alapjai kérdések",
     {
@@ -110,7 +71,7 @@ const kerdesek = [
     {
       szoveg: "★★ Mely állítás igaz a Python függvények argumentumátadásával kapcsolatban?",
       tipus: "radio",
-      valaszok: ["Lehetnek olyan paraméterek, amelyek csak kulcsszavas argumentummal adhatóak meg.", "Minden függvénynek pontosan meghatározott számú paramétere van, és pontosan ennyi argumantummal kell meghívni.", "Minden paraméter értéke megadható kulcsszavas argumentumként.", "A kulcsszavas argumentumok meg kell, hogy előzzék a sorrendi argumentumokat."],
+      valaszok: ["Lehetnek olyan paraméterek, amelyek csak kulcsszavas argumentummal adhatóak meg.", "Minden függvénynek pontosan meghatározott számú paramétere van, és pontosan ennyi argumentummal kell meghívni.", "Minden paraméter értéke megadható kulcsszavas argumentumként.", "A kulcsszavas argumentumok meg kell, hogy előzzék a sorrendi argumentumokat."],
       helyes: "Lehetnek olyan paraméterek, amelyek csak kulcsszavas argumentummal adhatóak meg.",
       kep: null
     },
@@ -287,7 +248,7 @@ const kerdesek = [
     {
       szoveg: "★★ Mire jó a Python with utasítása/környezete?",
       tipus: "radio",
-      valaszok: ["Erőforrások használata során biztosítja az erőforrás lezárását, akár volt hiba a használat közben, akár nem.", "Ez az utasítás nyitja meg a fájlokat és adja vissza őkez az as kulcsszó után megadott néven.", "Végigiterál a megnyitott fájlon, és egyenként visszaadja annak a sorait az as kulcsszó után megadott változóban.", "Ez az utasítás szükséges az erőforrások használatához."],
+      valaszok: ["Erőforrások használata során biztosítja az erőforrás lezárását, akár volt hiba a használat közben, akár nem.", "Ez az utasítás nyitja meg a fájlokat és adja vissza őkez az <b>as</b> kulcsszó után megadott néven.", "Végigiterál a megnyitott fájlon, és egyenként visszaadja annak a sorait az <b>as</b> kulcsszó után megadott változóban.", "Ez az utasítás szükséges az erőforrások használatához."],
       helyes: "Erőforrások használata során biztosítja az erőforrás lezárását, akár volt hiba a használat közben, akár nem.",
       kep: null
     },
@@ -315,7 +276,7 @@ const kerdesek = [
       szoveg: "★ Mely állítások igazak a Python set adattípusára? (2 helyes válasz van, a többi hamis.)",
       tipus: "checkbox",
       valaszok: ["A <b>-</b> operátor is értelmezett az értékein.", "A <b>not</b> operátor is értelmezett az értékein.", "A <b>+</b> és <b>*</b> operátorok is értelmezettek az értékein.", "Egy adott értékének elemei módosíthatóak az <b>[]</b> operátor és az értékadás művelet segítségével.", "Bármely (látszólag) értékmódosító művelete egy új értéket hoz létre."],
-      helyes: ["A - operátor is értelmezett az értékein.", "Bármely (látszólag) értékmódosító művelete egy új értéket hoz létre."],
+      helyes: ["A - operátor is értelmezett az értékein.", "A not operátor is értelmezett az értékein."],
       kep: null
     },
     {
@@ -895,8 +856,8 @@ const kerdesek = [
     {
       szoveg: "★★ Mely állítás igaz az eljárásvezérlés argumentumkezelési módjaival kapcsolatban?",
       tipus: "radio",
-      valaszok: ["Kimenő módú argumentumkezelés esetén a paraméter argumantummal megadott kezdőértéke az algoritmusban soha nem lesz felhasználva.", "Vegyes módú argumentumkezelés esetén a paraméter értékének megváltoztatása nem lesz hatással az argumentum értékére.", "Bemenő módú argumentumkezelés esetén a paraméter argumentummal megadott kezdőértéke az algoritmusban soha nem lesz felhasználva.", "Vegyes módú argumentumkezelés esetén a paraméter argumentummal megadott kezdőértéke az algoritmusban soha nem lesz felhasználva."],
-      helyes: "Kimenő módú argumentumkezelés esetén a paraméter argumantummal megadott kezdőértéke az algoritmusban soha nem lesz felhasználva.",
+      valaszok: ["Kimenő módú argumentumkezelés esetén a paraméter argumentummal megadott kezdőértéke az algoritmusban soha nem lesz felhasználva.", "Vegyes módú argumentumkezelés esetén a paraméter értékének megváltoztatása nem lesz hatással az argumentum értékére.", "Bemenő módú argumentumkezelés esetén a paraméter argumentummal megadott kezdőértéke az algoritmusban soha nem lesz felhasználva.", "Vegyes módú argumentumkezelés esetén a paraméter argumentummal megadott kezdőértéke az algoritmusban soha nem lesz felhasználva."],
+      helyes: "Kimenő módú argumentumkezelés esetén a paraméter argumentummal megadott kezdőértéke az algoritmusban soha nem lesz felhasználva.",
       kep: null
     },
     {
@@ -942,6 +903,82 @@ const kerdesek = [
       tipus: "radio",
       valaszok: ["Például fájlok biztonságos, hibafüggetlen lezárását tudjuk megvalósítani a segítségével.", "Fájlokat csak ennek a környezetnek a segítségével tudunk megnyitni, a fájlmegnyitás máshogy nem működik.", "Python-ban nincs ilyen utasítás (a <b>while</b> van, ami hasonló).", "Ez az utasítás szükséges az erőforrások használatához."],
       helyes: "Például fájlok biztonságos, hibafüggetlen lezárását tudjuk megvalósítani a segítségével.",
+      kep: null
+    },
+    {
+      szoveg: "★★ Csúszóátlag számításakor érdemes a sorozatnak csak az átlag ablakába eső elemeit eltárolni, mert a beolvasó és feldolgozó utasítások keverése általában rossz algoritmushoz vezet.",
+      tipus: "radio",
+      valaszok: ["(nincs válasz)", "Egyik állítás sem igaz.", "Az első állítás igaz, a második hamis.", "Az első állítás hamis, a második igaz.", "Mindkét állítás igaz, de nincs összefüggés köztük.", "Mindkét állítás igaz, és összefüggés van köztük."],
+      helyes: "Az első állítás igaz, a második hamis.",
+      kep: null
+    },
+    {
+      szoveg: "★★ Milyen absztrakt adattípusokat használna legalább egytized Celsius-fokos pontosságú hőmérsékleti értékek sorozatának tárolására?",
+      tipus: "checkbox",
+      valaszok: ["Logikai", "Sztring", "Halmaz", "Dictionary"],
+      helyes: [],
+      kep: null
+    },
+    {
+      szoveg: "★★ Mely állítások igazak a Python set adattípusára? (2 helyes válasz van, a többi hamis.)",
+      tipus: "checkbox",
+      valaszok: ["A <b>-</b> operátor is értelmezett az értékein.", "A <b>not</b> operátor is értelmezett az értékein.", "A <b>+</b> és <b>*</b> operátorok is értelmezettek az értékein.", "A kisebb-nagyobb relációs operátorok nem értelmezettek az értékein.", "Bármely (látszólag) értékmódosító művelete egy új értéket hoz létre."],
+      helyes: ["A - operátor is értelmezett az értékein.", "A not operátor is értelmezett az értékein."],
+      kep: null
+    },
+    {
+      szoveg: "★★ Hogyan használhatjuk Python-ban az f fájlt, ha az f = open('random.txt', 'rt') utasítással nyitottuk meg? (2 helyes válasz van, a többi hamis.)",
+      tipus: "checkbox",
+      valaszok: ["Használhatjuk az <b>f.readline()</b> metódushívást, ami a fájl következő sorát adja vissza egy sztringként.", "Használhatjuk az <b>f.close()</b> metódushívást, ami lezárja a fájlt.", "Használhatjuk az <b>f.write(s)</b> metódushívást, ami az <b>s</b> sztring tartalmát kiírja a fájlba.", "Használhatjuk az <b>f.readlines()</b> metódushívást, ami a fájl teljes tartalmát adja vissza egyetlen sztringként.", "Használhatjuk az <b>f.read()</b> metódushívást, ami a fájl teljes tartalmát adja vissza sorok (sztringek) listájaként."],
+      helyes: ["Használhatjuk az f.readline() metódushívást, ami a fájl következő sorát adja vissza egy sztringként.", "Használhatjuk az f.close() metódushívást, ami lezárja a fájlt."],
+      kep: null
+    },
+    {
+      szoveg: "★★ Tegye sorrendbe a függvényhívás végrehajtásának technikai lépéseit!",
+      tipus: "sorrend",
+      valaszok: ["Vezérlés átadása a hívott függvénynek", "Függvény utasításainak végrehajtása", "A függvény lokális változóinak törlése", "Vezérlés visszaadása a hívó félnek"],
+      helyes: ["Vezérlés átadása a hívott függvénynek", "Függvény utasításainak végrehajtása", "A függvény lokális változóinak törlése", "Vezérlés visszaadása a hívó félnek"]
+    },
+    {
+      szoveg: "★★ Mi történik a szoftverfejlesztés \"Tesztelés\" nevű lépésében?",
+      tipus: "radio",
+      valaszok: ["Ellenőrízzük, hogy a létrehozott program használható-e arra, amire tervezték.", "Valamilyen formálisabb (pl. matematikai) nyelven megfogalmazzuk a problémát.", "Létrehozzuk a problémát megoldó programot.", "Kijavítjuk a használat közben megtalált hibákat."],
+      helyes: "Ellenőrízzük, hogy a létrehozott program használható-e arra, amire tervezték.",
+      kep: null
+    },
+    {
+      szoveg: "★★ Mely állítás igaz az eljárásvezérlés argumentumkezelési módjaival kapcsolatban?",
+      tipus: "radio",
+      valaszok: ["Kimenő módú argumentumkezelés esetén a paraméter argumentummal megadott kezdőértéke az algoritmusban soha nem lesz felhasználva.", "Kimenő módú argumentumkezelés esetén a paraméter értékének megváltoztatása nem lesz hatással az argumentum értékére.", "Bemenő módú argumentumkezelés esetén a paraméter értékének megváltoztatása esetén a megadott argumentum értéke is megváltozik.", "Bemenő módú argumentumkezelés esetén az argumentum nem lehet literál vagy konstans."],
+      helyes: "Kimenő módú argumentumkezelés esetén a paraméter argumentummal megadott kezdőértéke az algoritmusban soha nem lesz felhasználva.",
+      kep: null
+    },
+    {
+      szoveg: "★★ Mely állítások igazak a Python list adattípusára? (2 helyes válasz van, a többi hamis.)",
+      tipus: "checkbox",
+      valaszok: ["A <b>%</b> operátor nem értelmezett az értékein.", "Egy adott értékének elemei módosíthatók az <b>[]</b> operátor és az értékadás művelet segítségével..", "A <b>-</b> operátor is értelmezett az értékein.", "A kisebb-nagyobb relációs operátorok nem értelmezettek az értékein..", "Az <b>and</b> és <b>or</b> operátorok nem értelmezettek az értékein."],
+      helyes: ["A % operátor nem értelmezett az értékein.", "Egy adott értékének elemei módosíthatók az [] operátor és az értékadás művelet segítségével.."],
+      kep: null
+    },
+    {
+      szoveg: "★★ Mi az eredménye az assert f(x) == (c, m) utasításnak?",
+      tipus: "radio",
+      valaszok: ["Ha az <b>f(x)</b> két visszatérési értéke nem <b>c</b> és <b>m</b>, akkor a program hibával leáll.", "Ha az <b>f(x)</b> visszatérési értéke nem <b>c</b>, akkor a program hibával leáll.", "Az <b>f(x)</b> függvény végeredményét határozza meg (ami ebben az esetben két érték egyszerre, <b>c</b> és <b>m</b>).", "Ha az <b>f(x)</b> visszatérési értéke nem <b>c</b> vagy <b>m</b>, akkor a program hibát fog dobni."],
+      helyes: "Ha az f(x) két visszatérési értéke nem c és m, akkor a program hibával leáll.",
+      kep: null
+    },
+    {
+      szoveg: "★★ Python-ban nem lehet rekurzívan eljárást hívni, mert a visszatérési érték felhasználása a rekurzió során nem kötelező.",
+      tipus: "radio",
+      valaszok: ["(nincs válasz)", "Egyik állítás sem igaz.", "Az első állítás igaz, a második hamis.", "Az első állítás hamis, a második igaz.", "Mindkét állítás igaz, de nincs összefüggés köztük.", "Mindkét állítás igaz, és összefüggés van köztük."],
+      helyes: "Az első állítás hamis, a második igaz.",
+      kep: null
+    },
+    {
+      szoveg: "?★ Mely állítások igazak a Python int adattípusára? (2 helyes válasz van, a többi hamis.)",
+      tipus: "checkbox",
+      valaszok: ["A <b>-</b> operátor is értelmezett az értékein.", "A <b>//</b> operátor int típusú eredménye a maradékos osztás hányadosa.", "A <b>%</b> operátor nem értelmezett az értékein.", "A kisebb-nagyobb relációs operátorok nem értelmezettek az értékein.", "Az <b>and</b> és <b>or</b> operátorok nem értelmezettek az értékein."],
+      helyes: ["A - operátor is értelmezett az értékein.", "A // operátor int típusú eredménye a maradékos osztás hányadosa."],
       kep: null
     },
   ]
