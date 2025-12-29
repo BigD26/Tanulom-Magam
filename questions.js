@@ -1,4 +1,15 @@
 const kerdesek = [
+  [ // MINTA KÉRDÉSSOR
+    "Értelmezés",
+    {
+      szoveg: "Értelmezés",
+      tipus: "radio",
+      valaszok: ["Ez az oldal azért jött létre, hogy segítse a saját tanulásomat és másokét is. Itt a kérdések gyakorlására és a helyes megoldások megértésére van lehetőség. A cél, hogy gyorsan át lehessen látni, melyik válasz biztos, melyik valószínű, és melyik bizonytalan, így hatékonyabban lehet tanulni és memorizálni. <br><br><u>A jelölések jelentése a kérdések előtt:</u><br><br>★★ – Fix megoldás. Ez a válasz biztosan helyes a teszt megoldások alapján. <br>★ – Nagy valószínűséggel helyes. <br>?★ – Bizonytalan. Nem lehet biztosan tudni, de valószínűleg ez a helyes."],
+      helyes: "",
+      kep: null
+    }
+  ],
+
   [
     "Programozás alapjai kérdések",
     {
