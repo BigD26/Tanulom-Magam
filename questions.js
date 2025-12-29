@@ -740,5 +740,209 @@ const kerdesek = [
       helyes: "Egy változóazonosítóhoz a program futása során akárhányszor új értéket rendelhetünk.",
       kep: null
     },
+    {
+      szoveg: "★★ Csoportosítsd a következő elemeket!",
+      tipus: "dragdrop",
+      parok: [
+        { bal: "RAM", jobb: "Hardver" },
+        { bal: ["WINDOWS", "PYTHON", "JPEG"], jobb: "Szoftver" },
+      ],
+      kihagyhato: []
+    },
+    {
+      szoveg: "★★ Csoportosítsd a következő elemeket!",
+      tipus: "dragdrop",
+      parok: [
+        { bal: ["RAM", "SSD"], jobb: "Hardver" },
+        { bal: "WINDOWS", jobb: "Szoftver" },
+      ],
+      kihagyhato: ["PDF"]
+    },
+    {
+      szoveg: "★★ Melyik állítás a leginkább igaz a fájlok használatával kapcsolatban a programírás tekintetében?",
+      tipus: "radio",
+      valaszok: ["A fájlokat használat előtt meg kell nyitni, és használat után le kell zárni.", "A fájlból könnyű véletlenszerű sorrendben kiolvasni a benne tárolt adatokat.", "A fájlokat mindig eltérő hosszú, karakterekből álló sorok sorozatának tekintjük.", "A fájl tartalma határozza meg, hogy bináris vagy szöveges módban lehet-e megnyitni."],
+      helyes: "A fájlokat használat előtt meg kell nyitni, és használat után le kell zárni.",
+      kep: null
+    },
+    {
+      szoveg: "★★ Csoportosítsd a következő elemeket!",
+      tipus: "dragdrop",
+      parok: [
+        { bal: ["CPU", "HDD"], jobb: "Hardver" },
+        { bal: "WINDOWS", jobb: "Szoftver" },
+      ],
+      kihagyhato: ["HTML"]
+    },
+    {
+      szoveg: "★ Mely állítások igazak a Python list adattípusára? (2 helyes válasz van, a többi hamis.)",
+      tipus: "checkbox",
+      valaszok: ["A <b>%</b> operátor nem értelmezett az értékein.", "A <b>not</b> operátor is értelmezett az értékein.", "A <b>-</b> operátor is értelmezett az értékein.", "Az <b>and</b> és <b>or</b> operátorok nem értelmezettek az értékein.", "Bármely (látszólag) értékmódosító művelete egy új értéket hoz létre."],
+      helyes: ["A % operátor nem értelmezett az értékein.", "A not operátor is értelmezett az értékein."],
+      kep: null
+    },
+    {
+      szoveg: "★★ Minek a definíciója a következő: A program egy olyan komponense, amely egy (rész)algoritmust valósít meg és és többször felhasználható?",
+      tipus: "radio",
+      valaszok: ["Függvény", "Változó", "Literál", "Konstans"],
+      helyes: "Függvény",
+      kep: null
+    },
+    {
+      szoveg: "★★ Mely állítások igazak a Python range adattípusára? (2 helyes válasz van, a többi hamis.)",
+      tipus: "checkbox",
+      valaszok: ["Az értékkészletét elemek halmazai alkotják.", "Jól használható tetszőleges számlálásos vezérlés megvalósítására.", "Az értékkészletét tetszőleges értékekből álló sorozatok alkotják.", "Egy adott értékének hossza/mérete a gyakorlatban a rendelkezésre álló memória által érdemben korlátozott.", "Az értékkészletét azonos típusú értékekből álló sorozatok alkotják."],
+      helyes: ["Jól használható tetszőleges számlálásos vezérlés megvalósítására.", "Az értékkészletét azonos típusú értékekből álló sorozatok alkotják."],
+      kep: null
+    },
+    {
+      szoveg: "★★ Milyen vezérlési szerkezetek megvalósítása látható az alábbi kódban: (2 helyes válasz van, a többi hamis.)",
+      tipus: "checkbox",
+      valaszok: ["Egyszerű szelekciós vezérlés", "Eljárásvezérlés", "Kezdőfeltételes ismétléses vezérlés", "Végfeltételes ismétléses vezérlés", "Számlálásos ismétléses vezérlés"],
+      helyes: ["Egyszerű szelekciós vezérlés", "Eljárásvezérlés"],
+      kep: "program1.png"
+    },
+    {
+      szoveg: "★★ Mely állítások igazak a Python float adattípusára? (2 helyes válasz van, a többi hamis.)",
+      tipus: "checkbox",
+      valaszok: ["A <b>+</b> és <b>*</b> operátorok is értelmezettek az értékein.", "A <b>**</b> és <b>//</b> operátorok is értelmezettek az értékein.", "A <b>%</b> operátor nem értelmezett az értékein.", "A kisebb-nagyobb relációs operátorok nem értelmezettek az értékein.", "Az <b>and</b> és <b>or</b> operátorok nem értelmezettek az értékein."],
+      helyes: ["A + és * operátorok is értelmezettek az értékein.", "A ** és // operátorok is értelmezettek az értékein."],
+      kep: null
+    },
+    {
+      szoveg: "★★ Az alábbiak közül általánosan melyik állítás igaz az adattárolás direkt és indirekt jellemzőire?",
+      tipus: "radio",
+      valaszok: ["Az azonosítóhoz rendelt memóriaterületen direkt adattárolás esetén maga az érték, indirekt tárolás esetén az érték memóriabeli helye van eltárolva.", "Indirekt adattárolás esetén \"véletlenül\" tároljuk a változók értékeit, direkt adattárolás esetén \"szándékosan\".", "Indirekt adattárolás esetén értékadás után a másolt érték kétszer szerepel a memóriában.", "A direkt és indirekt adattárolás között manapság már nincs érdemi különbség."],
+      helyes: "Az azonosítóhoz rendelt memóriaterületen direkt adattárolás esetén maga az érték, indirekt tárolás esetén az érték memóriabeli helye van eltárolva.",
+      kep: null
+    },
+    {
+      szoveg: "★★ Milyen absztrakt adattípusokat használna legalább egytized Celsius-fokos pontosságú hőmérsékleti értékek sorozatának tárolására?",
+      tipus: "radio",
+      valaszok: ["Lista", "Egész szám", "Sztring", "Dictionary"],
+      helyes: "Lista",
+      kep: null
+    },
+    {
+      szoveg: "★★ Mely problémákat nem ajánlott rekurzióval megoldani, illetve melyeket érdemesebb vagy nem rosszabb rekurzívan, mint nem rekurzívan megoldani? (A válasz nem feltétlenül esik egybe azzal, ahogyan az előadáson megoldottuk az egyes problémákat!)",
+      tipus: "dragdrop",
+      parok: [
+        { bal: ["Csúszóátlag számítás", "Prímszámok meghatározása adott n-ig", "n alatt k kiszámítása"], jobb: "Nem ajánlott rekurzióval megoldani" },
+        { bal: "Két szám legnagyobb közös osztója", jobb: "Érdemes, vagy nem kifejezetten rossz a rekurzió" }
+      ],
+      kihagyhato: []
+    },
+    {
+      szoveg: "★★ Mikor és milyen hatása van a break utasításnak Python-ban?",
+      tipus: "radio",
+      valaszok: ["Hatására a ciklushoz tartozó <b>else</b> ág végrehajtása nélkül befejeződik a ciklus végrehajtása.", "Hatására a ciklus azonnal a következő iteráció végrehajtásával folytatódik (vagy az <b>else</b> ággal, ha nincs több iteráció).", "A ciklus végrehajtása felfüggesztésre kerül a következő <b>continue</b> utasítás végrehajtásáig.", "A ciklus végrehajtása várakozás nélkül a következő <b>continue</b> utasítástól folytatódik."],
+      helyes: "Hatására a ciklushoz tartozó else ág végrehajtása nélkül befejeződik a ciklus végrehajtása.",
+      kep: null
+    },
+    {
+      szoveg: "★★ Mi történik a szoftverfejlesztés \"Fenntartás\" nevű lépésében?",
+      tipus: "radio",
+      valaszok: ["Kijavítjuk a használat közben megtalált hibákat.", "A (későbbi) felhasználó a saját nyelvén megfogalmazza a problémát.", "Létrehozzuk a problémát megoldó algoritmust.", "Ellenőrízzük, hogy a létrehozott program megfelel-e a vele szemben támasztott követelményeknek."],
+      helyes: "Kijavítjuk a használat közben megtalált hibákat.",
+      kep: null
+    },
+    {
+      szoveg: "★★ Tegye sorrendbe a függvényhívás végrehajtásának technikai lépéseit!",
+      tipus: "sorrend",
+      valaszok: ["Függvényhívás argumentumainak kiértékelése", "Függvény utasításainak végrehajtása", "A függvény lokális változóinak törlése", "Vezérlés visszaadása a hívó félnek"],
+      helyes: ["Függvényhívás argumentumainak kiértékelése", "Függvény utasításainak végrehajtása", "A függvény lokális változóinak törlése", "Vezérlés visszaadása a hívó félnek"]
+    },
+    {
+      szoveg: "★★ Párosítsd a Python slicing kifejezéseket az előálló értékekkel, ha C = [1, 3, 5, 7, 9]. (1 elemnek nincs párja.)",
+      tipus: "dragdrop",
+      parok: [
+        { bal: "[1, 3, 5, 7, 9]", jobb: "C[::]" },
+        { bal: "[1, 3, 5, 7]", jobb: "C[:-1]" },
+        { bal: "[]", jobb: "C[:-1:-1]" }
+      ],
+      kihagyhato: []
+    },
+    {
+      szoveg: "★★ Mi történik a szoftverfejlesztés \"Megvalósítás\" nevű lépésében?",
+      tipus: "radio",
+      valaszok: ["Létrehozzuk a problémát megoldó programot.", "A (későbbi) felhasználó a saját nyelvén megfogalmazza a problémát.", "Ellenőrízzük, hogy a létrehozott program megfelel-e a vele szemben támasztott követelményeknek.", "Ellenőrízzük, hogy a létrehozott program használható-e arra, amire tervezték."],
+      helyes: "Létrehozzuk a problémát megoldó programot.",
+      kep: null
+    },
+    {
+      szoveg: "★★ Milyen vezérlési szerkezetek megvalósítása látható az alábbi kódban: (2 helyes válasz van, a többi hamis.)",
+      tipus: "checkbox",
+      valaszok: ["Többszörös szelekciós vezérlés", "Függvényvezérlés", "Szekvenciális vezérlés", "Végfeltételes ismétléses vezérlés", "Diszkrét ismétléses vezérlés"],
+      helyes: ["Többszörös szelekciós vezérlés", "Függvényvezérlés"],
+      kep: "program5.png"
+    },
+    {
+      szoveg: "★★ Csoportosítsd a következő elemeket!",
+      tipus: "dragdrop",
+      parok: [
+        { bal: "CPU", jobb: "Hardver" },
+        { bal: ["WINDOWS", "PYTHON"], jobb: "Szoftver" },
+      ],
+      kihagyhato: ["HTML"]
+    },
+    {
+      szoveg: "★★ Mi a szintaxis?",
+      tipus: "radio",
+      valaszok: ["Szabályok összessége, mely leírja, hogy egy adott nyelvben mik az érvényes jelsorozatok.", "Egy program tervezésének első lépése.", "Egy adattípus műveleteinek leírása.", "Ez adja meg, hogy az adott nyelvben értelmes jelsorozatoknak mi a jelentése."],
+      helyes: "Szabályok összessége, mely leírja, hogy egy adott nyelvben mik az érvényes jelsorozatok.",
+      kep: null
+    },
+    {
+      szoveg: "★★ Mely állítás igaz az eljárásvezérlés argumentumkezelési módjaival kapcsolatban?",
+      tipus: "radio",
+      valaszok: ["Kimenő módú argumentumkezelés esetén a paraméter argumantummal megadott kezdőértéke az algoritmusban soha nem lesz felhasználva.", "Vegyes módú argumentumkezelés esetén a paraméter értékének megváltoztatása nem lesz hatással az argumentum értékére.", "Bemenő módú argumentumkezelés esetén a paraméter argumentummal megadott kezdőértéke az algoritmusban soha nem lesz felhasználva.", "Vegyes módú argumentumkezelés esetén a paraméter argumentummal megadott kezdőértéke az algoritmusban soha nem lesz felhasználva."],
+      helyes: "Kimenő módú argumentumkezelés esetén a paraméter argumantummal megadott kezdőértéke az algoritmusban soha nem lesz felhasználva.",
+      kep: null
+    },
+    {
+      szoveg: "★★ Párosítsd a Python slicing kifejezéseket az előálló értékekkel, ha C = [1, 3, 5, 7, 9]. (1 elemnek nincs párja.)",
+      tipus: "dragdrop",
+      parok: [
+        { bal: "[9, 7, 5, 3, 1]", jobb: "C[::-1]" },
+        { bal: "[]", jobb: "C[:-1:-1]" },
+        { bal: "[9, 7, 5]", jobb: "C[-1:1:-1]" }
+      ],
+      kihagyhato: []
+    },
+    {
+      szoveg: "★★ Mi az eredménye az assert f(x) == c, m utasításnak?",
+      tipus: "radio",
+      valaszok: ["Ha az <b>f(x)</b> visszatérési értéke <b>c</b>, akkor a program tovább fut.", "Az <b>f(x)</b> függvény végeredményét határozza meg (ami ebben az esetben két érték egyszerre, <b>c</b> és <b>m</b>).", "Ha az <b>f(x)</b> két visszatérési értéke <b>c</b> és <b>m</b>, akkor a program tovább fut.", "Az <b>f(x)</b> visszatérési értéke nem <b>c</b> vagy <b>m</b> akkor a program hibát fog dobni."],
+      helyes: "Ha az f(x) visszatérési értéke c, akkor a program tovább fut.",
+      kep: null
+    },
+    {
+      szoveg: "★★ Mit írhat elő leginkább a szelekciós vezérlés?",
+      tipus: "radio",
+      valaszok: ["Egy kifejezés értéke alapján több utasítás közül az egyik végrehajtását.", "Az algoritmus lépéseinek megadott sorrendben történő egyszeri végrehajtását.", "Egy utasítás megadott számú ismétlését.", "Értékek kiszámítását valamely előre megadott részalgoritmus alkalmazása segítségével."],
+      helyes: "Egy kifejezés értéke alapján több utasítás közül az egyik végrehajtását.",
+      kep: null
+    },
+    {
+      szoveg: "★★ Az alábbiak közül általánosan melyik állítás igaz az adattárolás direkt és indirekt jellemzőire?",
+      tipus: "radio",
+      valaszok: ["Indirekt adattárolás esetén az érték nem az azonosítóhoz rendelt memóriaterületen van tárolva.", "Indirekt adattárolás esetén értékadás után a másolt érték kétszer szerepel a memóriában.", "Direkt adattárolás esetén értékadás után előfordulhat, hogy az eredeti változó értékének módosulása kihat az új változó értékére is.", "A direkt és indirekt adattárolás között manapság már nincs érdemi különbség."],
+      helyes: "Indirekt adattárolás esetén az érték nem az azonosítóhoz rendelt memóriaterületen van tárolva.",
+      kep: null
+    },
+    {
+      szoveg: "?★ Meg kell határozni az összes prímszámot egy, a felhasználó által megadott számig. Mely állítások igazak az algoritmustervezéssel és Python megvalósítással kapcsolatban?",
+      tipus: "radio",
+      valaszok: ["Az Eratoszthenészi szita algoritmus halmaz típussal történő megvalósítása Python-ban hatékonyabb, mint a listás megvalósítás.", "Az Eratoszthenészi szita algoritmus lista típussal történő megvalósítása Python-ban hatékonyabb, mint a halmazzal való megvalósítás.", "Az Eratoszthenészi szita algoritmus halmazos és listás megvalósítása között Python-ban nem igazán van hatékonyságbeli különbség.", "Egy konkrét számról eldönteni, hogy prím-e, hatékonyabb az Eratoszthenészi szita algoritmussal, mint egyedi ellenőrzéssel."],
+      helyes: "Az Eratoszthenészi szita algoritmus halmaz típussal történő megvalósítása Python-ban hatékonyabb, mint a listás megvalósítás.",
+      kep: null
+    },
+    {
+      szoveg: "★★ Mire jó a Python with utasítása/környezete?",
+      tipus: "radio",
+      valaszok: ["Például fájlok biztonságos, hibafüggetlen lezárását tudjuk megvalósítani a segítségével.", "Fájlokat csak ennek a környezetnek a segítségével tudunk megnyitni, a fájlmegnyitás máshogy nem működik.", "Python-ban nincs ilyen utasítás (a <b>while</b> van, ami hasonló).", "Ez az utasítás szükséges az erőforrások használatához."],
+      helyes: "Például fájlok biztonságos, hibafüggetlen lezárását tudjuk megvalósítani a segítségével.",
+      kep: null
+    },
   ]
 ];
