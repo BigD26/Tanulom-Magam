@@ -34,6 +34,13 @@ const kerdesek = [
       kep: null
     },
     {
+      szoveg: "?★ Milyen absztrakt adattípusokat használna annak tárolására, hogy mely országokból érkeztek turisták Szegedre az elmúlt 10 évben, ha az, hogy honnan nem érkeztek, nem érdekes?",
+      tipus: "checkbox",
+      valaszok: ["Sztring", "Logikai", "Egész", "Dictionary"],
+      helyes: ["Sztring"],
+      kep: null
+    },
+    {
       szoveg: "★ Mely állítások igazak a Python dict adattípusára? (2 helyes válasz van, a többi hamis.)",
       tipus: "checkbox",
       valaszok: ["A kisebb-nagyobb relációs operátorok nem értelmezettek az értékein.", "Egy adott értékének elemei módosíthatóak az <b>[]</b> operátor és az értékadás művelet segítségével.", "A <b>-</b> operátor is értelmezett az értékein.", "Az <b>and</b> és <b>or</b> operátorok nem értelmezettek az értékein.", "Bármely (látszólag) értékmódosító művelete egy új értéket hoz létre."],
@@ -187,6 +194,13 @@ const kerdesek = [
       kihagyhato: []
     },
     {
+      szoveg: "?★ Milyen absztrakt adattípusokat használna annak tárolására, hogy mely országokból érkeztek turisták Szegedre az elmúlt 10 évben, ha az, hogy honnan nem érkeztek, nem érdekes?",
+      tipus: "checkbox",
+      valaszok: ["Sztring", "Logikai", "Valós", "Dictionary"],
+      helyes: ["Sztring"],
+      kep: null
+    },
+    {
       szoveg: "★★ Mely állítások igazak a Python float adattípusára? (2 helyes válasz van, a többi hamis.)",
       tipus: "checkbox",
       valaszok: ["A <b>+</b> és <b>*</b> operátorok is értelmezettek az értékein.", "A <b>/</b> operátor is értelmezett az értékein.", "A <b>%</b> operátor nem értelmezett az értékein.", "Az <b>and</b> és <b>or</b> operátorok nem értelmezettek az értékein.", "A <b>//</b> operátor <b>int</b> típusú eredménye a maradékos osztás hányadosa."],
@@ -268,6 +282,13 @@ const kerdesek = [
       tipus: "radio",
       valaszok: ["Az algoritmus lépéseinek megadott sorrendben történő egyszeri végrehajtását.", "Két utasítás közül valamilyen feltétel alapján az egyik végrehajtását.", "Több utasítás közül valamilyen feltételek alapján az egyik végrehajtását.", "Egy utasítás megadott számú ismétlését."],
       helyes: "Az algoritmus lépéseinek megadott sorrendben történő egyszeri végrehajtását.",
+      kep: null
+    },
+    {
+      szoveg: "?★ A rekurzió nem csak függvényekre, hanem eljárásokra is működik, mert a lokális változók és paraméterek értékei az adott függvényhíváshoz/eljáráshíváshoz kötődnek.",
+      tipus: "radio",
+      valaszok: ["(nincs válasz)", "Egyik állítás sem igaz.", "Az első állítás igaz, a második hamis.", "Az első állítás hamis, a második igaz.", "Mindkét állítás igaz, de nincs összefüggés köztük.", "Mindkét állítás igaz, és összefüggés van köztük."],
+      helyes: "Mindkét állítás igaz, de nincs összefüggés köztük.",
       kep: null
     },
     {
@@ -411,6 +432,13 @@ const kerdesek = [
       kep: null
     },
     {
+      szoveg: "?★ Milyen absztrakt adattípusokat használna egy-egy háziállat tulajdonságainak (név, súly (kilogrammban, 100 gramm pontossággal), kor (években), ivartalanítva van-e, tulajdonos neve, betegség neve és hozzá tartozó utolsó kezelés leírása) tárolására?",
+      tipus: "checkbox",
+      valaszok: ["Sztring", "Dictionary", "Lista", "Halmaz"],
+      helyes: ["Sztring", "Dictionary"],
+      kep: null
+    },
+    {
       szoveg: "★ Mely állítás igaz a Python függvények argumentumátadásával kapcsolatban?",
       tipus: "radio",
       valaszok: ["Lehetőség van tetszőleges (előre nem definiált) kulcsszavas argumentumok kezelésére.", "Minden függvénynek pontosan meghatározott számú paramétere van, és pontosan ennyi argumentummal kell meghívni.", "Minden paraméter értéke megadható kulcsszavas argumentumként.", "A paraméterlistában vegyesen lehetnek default értékekkel ellátott és default érték nélküli paraméterek."],
@@ -486,6 +514,13 @@ const kerdesek = [
       kihagyhato: []
     },
     {
+      szoveg: "?★ Milyen absztrakt adattípusokat használna egy-egy háziállat tulajdonságainak (név, súly (kilogrammban, 100 gramm pontossággal), kor (években), ivartalanítva van-e, tulajdonos neve, betegség neve és hozzá tartozó utolsó kezelés leírása) tárolására?",
+      tipus: "checkbox",
+      valaszok: ["Egész", "Sztring", "Lista", "Halmaz"],
+      helyes: ["Egész", "Sztring"],
+      kep: null
+    },
+    {
       szoveg: "★★ Az alábbiak közül általánosan melyik állítás igaz az adattárolás konstans és változó fogalmaira?",
       tipus: "radio",
       valaszok: ["Egy változóazonosító megkaphatja egy konstans azonosító értékét, és ez fordítva is lehetséges.", "Egy konstans azonosítóhoz a program futása során nem rendelhetünk értéket.", "Egy konstans azonosító által hivatkozott érték a program futása során semmilyen körülmények között nem változhat meg.", "Egy konstans azonosító megkaphatja egy változó értékét, de ez fordítva nem lehetséges."],
@@ -553,6 +588,13 @@ const kerdesek = [
       tipus: "radio",
       valaszok: ["A standard bemenetről lehet vele kizárólag sztringeket beolvastatni.", "A standard bemenetről lehet vele számokat beolvastatni.", "Egy másik modulban (.py fájlban) található függvényeket tudunk használni a segítségével.", "Írásra megnyitott fájlokba is lehet a segítségével adatot írni."],
       helyes: "A standard bemenetről lehet vele kizárólag sztringeket beolvastatni.",
+      kep: null
+    },
+    {
+      szoveg: "?★ Milyen absztrakt adattípusokat használna egy-egy háziállat tulajdonságainak (név, súly (kilogrammban, 100 gramm pontossággal), kor (években), ivartalanítva van-e, tulajdonos neve, betegség neve és hozzá tartozó utolsó kezelés leírása) tárolására?",
+      tipus: "checkbox",
+      valaszok: ["Egész", "Valós", "Sztring", "Dictionary"],
+      helyes: ["Egész", "Sztring"],
       kep: null
     },
     {
@@ -644,6 +686,13 @@ const kerdesek = [
       kihagyhato: []
     },
     {
+      szoveg: "?★ Milyen absztrakt adattípusokat használna legalább egytized Celsius-fokos pontosságú hőmérsékleti értékek sorozatának tárolására?",
+      tipus: "checkbox",
+      valaszok: ["Valós szám", "Dictionary", "Egész szám", "Halmaz"],
+      helyes: ["Valós szám"],
+      kep: null
+    },
+    {
       szoveg: "★ Mely állítások igazak a Python tuple adattípusára? (2 helyes válasz van, a többi hamis.)",
       tipus: "checkbox",
       valaszok: ["A <b>-</b> operátor is értelmezett az értékein.", "A <b>not</b> operátor is értelmezett az értékein.", "A <b>+</b> és <b>*</b> operátorok is értelmezettek az értékein.", "A kisebb-nagyobb relációs operátorok nem értelmezettek az értékein.", "Egy adott értékének elemei módosíthatóak az <b>[]</b> operátor és az értékadás művelet segítségével."],
@@ -722,6 +771,13 @@ const kerdesek = [
       kihagyhato: []
     },
     {
+      szoveg: "?★ Milyen absztrakt adattípusokat használna annak tárolására, hogy mely országokból érkeztek turisták Szegedre az elmúlt 10 évben, ha az, hogy honnan nem érkeztek, nem érdekes?",
+      tipus: "checkbox",
+      valaszok: ["Valós", "Dictionary", "Egész", "Sztring"],
+      helyes: ["Sztring"],
+      kep: null
+    },
+    {
       szoveg: "★★ Csoportosítsd a következő elemeket!",
       tipus: "dragdrop",
       parok: [
@@ -773,6 +829,13 @@ const kerdesek = [
       valaszok: ["Egyszerű szelekciós vezérlés", "Eljárásvezérlés", "Kezdőfeltételes ismétléses vezérlés", "Végfeltételes ismétléses vezérlés", "Számlálásos ismétléses vezérlés"],
       helyes: ["Egyszerű szelekciós vezérlés", "Eljárásvezérlés"],
       kep: "program1.png"
+    },
+    {
+      szoveg: "?★ Milyen absztrakt adattípusokat használna annak tárolására, hogy mely országokból érkeztek turisták Szegedre az elmúlt 10 évben, ha az, hogy honnan nem érkeztek, nem érdekes?",
+      tipus: "checkbox",
+      valaszok: ["Valós", "Dictionary", "Egész", "Logikai"],
+      helyes: [],
+      kep: null
     },
     {
       szoveg: "★★ Mely állítások igazak a Python float adattípusára? (2 helyes válasz van, a többi hamis.)",
@@ -990,6 +1053,13 @@ const kerdesek = [
       tipus: "checkbox",
       valaszok: ["A <b>-</b> operátor is értelmezett az értékein.", "A <b>//</b> operátor int típusú eredménye a maradékos osztás hányadosa.", "A <b>%</b> operátor nem értelmezett az értékein.", "A kisebb-nagyobb relációs operátorok nem értelmezettek az értékein.", "Az <b>and</b> és <b>or</b> operátorok nem értelmezettek az értékein."],
       helyes: ["A - operátor is értelmezett az értékein.", "A // operátor int típusú eredménye a maradékos osztás hányadosa."],
+      kep: null
+    },
+    {
+      szoveg: "★ A rekurzió nem csak függvényekre, hanem eljárásokra is működik, mert a lokális változók és paraméterek értékei az adott függvényhíváshoz/eljáráshíváshoz kötődnek.",
+      tipus: "radio",
+      valaszok: ["(nincs válasz)", "Egyik állítás sem igaz.", "Az első állítás igaz, a második hamis.", "Az első állítás hamis, a második igaz.", "Mindkét állítás igaz, de nincs összefüggés köztük.", "Mindkét állítás igaz, és összefüggés van köztük."],
+      helyes: "Mindkét állítás igaz, de nincs összefüggés köztük.",
       kep: null
     },
   ]
