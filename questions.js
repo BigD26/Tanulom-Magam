@@ -594,7 +594,7 @@ const kerdesek = [
       szoveg: "?★ Milyen absztrakt adattípusokat használna egy-egy háziállat tulajdonságainak (név, súly (kilogrammban, 100 gramm pontossággal), kor (években), ivartalanítva van-e, tulajdonos neve, betegség neve és hozzá tartozó utolsó kezelés leírása) tárolására?",
       tipus: "checkbox",
       valaszok: ["Egész", "Valós", "Sztring", "Dictionary"],
-      helyes: ["Egész", "Sztring"],
+      helyes: ["Egész", "Sztring", "Dictionary"],
       kep: null
     },
     {
@@ -677,16 +677,16 @@ const kerdesek = [
       kep: null
     },
     {
-      szoveg: "?★ Mely problémákat nem ajánlott rekurzióval megoldani, illetve melyeket érdemesebb vagy nem rosszabb rekurzívan, mint nem rekurzívan megoldani? (A válasz nem feltétlenül esik egybe azzal, ahogyan az előadáson megoldottuk az egyes problémákat!)",
+      szoveg: "★★ Mely problémákat nem ajánlott rekurzióval megoldani, illetve melyeket érdemesebb vagy nem rosszabb rekurzívan, mint nem rekurzívan megoldani? (A válasz nem feltétlenül esik egybe azzal, ahogyan az előadáson megoldottuk az egyes problémákat!)",
       tipus: "dragdrop",
       parok: [
-        { bal: ["Csúszóátlag számítás", "Prímszámok meghatározása adott n-ig", "n alatt k kiszámítása", "n! (n faktoriális) kiszámítása"], jobb: "Nem ajánlott rekurzióval megoldani" },
-        { bal: [], jobb: "Érdemes, vagy nem kifejezetten rossz a rekurzió" }
+        { bal: ["Csúszóátlag számítás", "Prímszámok meghatározása adott n-ig", "n alatt k kiszámítása"], jobb: "Nem ajánlott rekurzióval megoldani" },
+        { bal: ["n! (n faktoriális) kiszámítása"], jobb: "Érdemes, vagy nem kifejezetten rossz a rekurzió" }
       ],
       kihagyhato: []
     },
     {
-      szoveg: "?★ Milyen absztrakt adattípusokat használna legalább egytized Celsius-fokos pontosságú hőmérsékleti értékek sorozatának tárolására?",
+      szoveg: "★ Milyen absztrakt adattípusokat használna legalább egytized Celsius-fokos pontosságú hőmérsékleti értékek sorozatának tárolására?",
       tipus: "checkbox",
       valaszok: ["Valós szám", "Dictionary", "Egész szám", "Halmaz"],
       helyes: ["Valós szám"],
@@ -853,9 +853,9 @@ const kerdesek = [
     },
     {
       szoveg: "★★ Milyen absztrakt adattípusokat használna legalább egytized Celsius-fokos pontosságú hőmérsékleti értékek sorozatának tárolására?",
-      tipus: "radio",
+      tipus: "checkbox",
       valaszok: ["Lista", "Egész szám", "Sztring", "Dictionary"],
-      helyes: "Lista",
+      helyes: ["Lista"],
       kep: null
     },
     {
@@ -1060,6 +1060,146 @@ const kerdesek = [
       tipus: "radio",
       valaszok: ["(nincs válasz)", "Egyik állítás sem igaz.", "Az első állítás igaz, a második hamis.", "Az első állítás hamis, a második igaz.", "Mindkét állítás igaz, de nincs összefüggés köztük.", "Mindkét állítás igaz, és összefüggés van köztük."],
       helyes: "Mindkét állítás igaz, de nincs összefüggés köztük.",
+      kep: null
+    },
+    {
+      szoveg: "★ Mely állítások igazak a Python list adattípusára? (2 helyes válasz van, a többi hamis.)",
+      tipus: "checkbox",
+      valaszok: ["Értékkészlete összetett értékekből áll.", "Az értékkészletét tetszőleges értékekből álló sorozatok alkotják.", "Jól használható tetszőleges számlálásos vezérlés megvalósítására.", "Egy adott értékének elemeit nem tárolja el egyszerre.", "Egy adott értéke nem tartalmazhat változtatható értékeket."],
+      helyes: ["Értékkészlete összetett értékekből áll.", "Az értékkészletét tetszőleges értékekből álló sorozatok alkotják."],
+      kep: null
+    },
+    {
+      szoveg: "★ Mely állítások igazak a Python set adattípusára? (2 helyes válasz van, a többi hamis.)",
+      tipus: "checkbox",
+      valaszok: ["Értékkészlete összetett értékekből áll.", "Egy adott értéke nem tartalmazhat változtatható értékeket.", "Az értékkészletét egész számok számtani sorozatai alkotják.", "Jól használható tetszőleges számlálásos vezérlés megvalósítására.", "Az értékkészlete korlátozott, van egy elvi maximális tárolási hossz/méret."],
+      helyes: ["Értékkészlete összetett értékekből áll.", "Egy adott értéke nem tartalmazhat változtatható értékeket."],
+      kep: null
+    },
+    {
+      szoveg: "★ Mely állítás igaz az eljárásvezérlés argumentumkezelési módjaival kapcsolatban?",
+      tipus: "radio",
+      valaszok: ["Bemenő módú argumentumkezelés esetén a paraméter argumentummal megadott kezdőértéke az algoritmusban soha nem lesz felhasználva.", "Bemenő módú argumentumkezelés esetén az argumentum nem lehet literál vagy konstans.", "Kimenő módú argumentumkezelés esetén a paraméter értékének megváltoztatása esetén a megadott argumentum értéke is megváltozik.", "Bemenő módú argumentumkezelés esetén a paraméter értékének megváltoztatása esetén a megadott argumentum értéke is megváltozik."],
+      helyes: "Kimenő módú argumentumkezelés esetén a paraméter értékének megváltoztatása esetén a megadott argumentum értéke is megváltozik.",
+      kep: null
+    },
+    {
+      szoveg: "★ Mely állítások igazak a Python float adattípusára? (2 helyes válasz van, a többi hamis.)",
+      tipus: "checkbox",
+      valaszok: ["Nem képes ábrázolni az absztrakt adattípusához tartozó minden egyes értéket.", "Lehetséges értékei a valós számok.", "Értékkészlete összetett értékekből áll.", "Az értékkészlet tartományán belül bármely érték tárolására képes.", "Lehetséges értékei az egész számok."],
+      helyes: ["Nem képes ábrázolni az absztrakt adattípusához tartozó minden egyes értéket.", "Lehetséges értékei a valós számok."],
+      kep: null
+    },
+    {
+      szoveg: "★ Mely állítások igazak a Python range adattípusára? (2 helyes válasz van, a többi hamis.)",
+      tipus: "checkbox",
+      valaszok: ["Egy adott értékének elemeit nem tárolja el egyszerre.", "Az értékkészletét azonos típusú értékekből álló sorozatok alkotják.", "Értékkészlete elemi értékekből áll.", "Az értékkészletét tetszőleges értékekből álló sorozatok alkotják.", "Az értékkészletét elemek halmazai alkotják."],
+      helyes: ["Egy adott értékének elemeit nem tárolja el egyszerre.", "Az értékkészletét azonos típusú értékekből álló sorozatok alkotják."],
+      kep: null
+    },
+    {
+      szoveg: "?★ Python-ban működnek a rekurzív eljáráshívások, mert a lokális változók és paraméterek értékei az adott függvényhíváshoz/eljáráshíváshoz kötődnek.",
+      tipus: "radio",
+      valaszok: ["(nincs válasz)", "Egyik állítás sem igaz.", "Az első állítás igaz, a második hamis.", "Az első állítás hamis, a második igaz.", "Mindkét állítás igaz, de nincs összefüggés köztük.", "Mindkét állítás igaz, és összefüggés van köztük."],
+      helyes: "Mindkét állítás igaz, de nincs összefüggés köztük.",
+      kep: null
+    },
+    {
+      szoveg: "?★ Számsorozat határértékeinek és átlagának meghatározásakor érdemes a sorozat következő elemét minél hamarabb feldolgozni és \"eldobni\", mert a beolvasó és feldolgozó utasítások keverése általában rossz algoritmushoz vezet.",
+      tipus: "radio",
+      valaszok: ["(nincs válasz)", "Egyik állítás sem igaz.", "Az első állítás igaz, a második hamis.", "Az első állítás hamis, a második igaz.", "Mindkét állítás igaz, de nincs összefüggés köztük.", "Mindkét állítás igaz, és összefüggés van köztük."],
+      helyes: "Az első állítás igaz, a második hamis.",
+      kep: null
+    },
+    {
+      szoveg: "★ Mely állítások igazak a Python set adattípusára? (2 helyes válasz van, a többi hamis.)",
+      tipus: "checkbox",
+      valaszok: ["Jól használható tetszőleges számlálásos vezérlés megvalósítására.", "Egy adott értékének elemeit nem tárolja el egyszerre.", "Értékkészlete összetett értékekből áll.", "Az értékkészletét egész számok számtani sorozatai alkotják.", "Egy adott értéke nem tartalmazhat változtatható értékeket."],
+      helyes: ["Értékkészlete összetett értékekből áll.", "Egy adott értéke nem tartalmazhat változtatható értékeket."],
+      kep: null
+    },
+    {
+      szoveg: "★★ Mit írhat elő leginkább az eljárásvezérlés?",
+      tipus: "radio",
+      valaszok: ["Értékek kiszámítását valamely előre megadott részalgoritmus alkalmazása segítségével.", "Az algoritmus lépéseinek megadott sorrendben történő egyszeri végrehajtását.", "Az algoritmus lépéseinek megadott sorrendben történő többszöri végrehajtását.", "Több utasítás közül valamilyen feltételek alapján az egyik végrehajtását."],
+      helyes: "Értékek kiszámítását valamely előre megadott részalgoritmus alkalmazása segítségével.",
+      kep: null
+    },
+    {
+      szoveg: "★ Mely állítások igazak a Python float adattípusára? (2 helyes válasz van, a többi hamis.)",
+      tipus: "checkbox",
+      valaszok: ["Értékkészlete elemi értékekből áll.", "Lehetséges értékei a valós számok.", "Értékkészlete összetett értékekből áll.", "Az értékkészlet tartományán belül bármely érték tárolására képes.", "Lehetséges értékei az egész számok."],
+      helyes: ["Értékkészlete elemi értékekből áll.", "Lehetséges értékei a valós számok."],
+      kep: null
+    },
+    {
+      szoveg: "★★ A rekurzió nem csak függvényekre, hanem eljárásokra is működik, mert a függvény visszatérési értékét mindenképpen fel kell használnunk a rekurzív lépés során.",
+      tipus: "radio",
+      valaszok: ["(nincs válasz)", "Egyik állítás sem igaz.", "Az első állítás igaz, a második hamis.", "Az első állítás hamis, a második igaz.", "Mindkét állítás igaz, de nincs összefüggés köztük.", "Mindkét állítás igaz, és összefüggés van köztük."],
+      helyes: "Az első állítás igaz, a második hamis.",
+      kep: null
+    },
+    {
+      szoveg: "★★ Mely állítások igazak a Python list adattípusára? (2 helyes válasz van, a többi hamis.)",
+      tipus: "checkbox",
+      valaszok: ["Értékkészlete összetett értékekből áll.", "Egy adott értékének hossza/mérete a gyakorlatban a rendelkezésre álló memória által érdemben korlátozott.", "Jól használható tetszőleges számlálásos vezérlés megvalósítására.", "Egy adott értékének elemeit nem tárolja el egyszerre.", "Az értékkészlete korlátozott, van egy elvi maximális tárolási hossz/méret."],
+      helyes: ["Értékkészlete összetett értékekből áll.", "Egy adott értékének hossza/mérete a gyakorlatban a rendelkezésre álló memória által érdemben korlátozott."],
+      kep: null
+    },
+    {
+      szoveg: "★★ Párosítsd a Python comprehension kifejezéseket az előálló értékekkel. (1 elemnek nincs párja.)",
+      tipus: "dragdrop",
+      parok: [
+        { bal: "[-1]", jobb: "[a - 2 for a in {-3: -1, 1: 3} if a > 0]" },
+        { bal: "{1, -1}", jobb: "{a - 2 for a in {-3, -1, 1, 3} if a > 0}" },
+        { bal: "{-1:1, 1:3}", jobb: "{a - 2: a for a in [-3, -1, 1, 3] if a > 0}" }
+      ],
+      kihagyhato: []
+    },
+    {
+      szoveg: "★★ Párosítsd a Python sztring literálokat és értékeiket, ha e = 42, v = 42.16 és s = '4216'.",
+      tipus: "dragdrop",
+      parok: [
+        { bal: "'Hello 42.16!'", jobb: "f'Hello {v}!'" },
+        { bal: "'Hello 42!'", jobb: "f'Hello {v:_.0f}!'" },
+        { bal: "'Hello _42_!'", jobb: "f'Hello {e:_^4}!'" },
+        { bal: "'Hello 4216!'", jobb: "f'Hello {s:_^4.4s}!'" }
+      ],
+      kihagyhato: []
+    },
+    {
+      szoveg: "★★ Mely állítások igazak a Python set adattípusára? (2 helyes válasz van, a többi hamis.)",
+      tipus: "checkbox",
+      valaszok: ["A <b>-</b> operátor is értelmezett az értékein.", "A <b>%</b> operátor nem értelmezett az értékein.", "A kisebb-nagyobb relációs operátorok nem értelmezettek az értékein.", "Egy adott értékének elemei módosíthatók az <b>[]</b> operátor és az értékadás művelet segítségével.", "Bármely (látszólag) értékmódosító művelete egy új értéket hoz létre."],
+      helyes: ["A - operátor is értelmezett az értékein.", "A % operátor nem értelmezett az értékein."],
+      kep: null
+    },
+    {
+      szoveg: "★★ Milyen vezérlési szerkezetek megvalósítása látható az alábbi kódban: (2 helyes válasz van, a többi hamis.)",
+      tipus: "checkbox",
+      valaszok: ["Szekvenciális vezérlés", "Függvényvezérlés", "Egyszerű szelekciós vezérlés", "Számlálásos ismétléses vezérlés", "Diszkrét ismétléses vezérlés"],
+      helyes: ["Szekvenciális vezérlés", "Függvényvezérlés"],
+      kep: "program4.png"
+    },
+    {
+      szoveg: "★★ Mit ad meg egy nyelv szintaxisa?",
+      tipus: "radio",
+      valaszok: ["Többek között azt, hogy egy nyelvben milyen azonosítókat és kulcsszavakat lehet használni.", "Azt, hogy a szövegszerkesztőben milyen színnel jelenjenek meg az egyes elemek.", "Azt, hogy a nyelvben hogyan kell egy értéket kiíratni illetve beolvastatni.", "Például azt, hogy a nyelv egyes típusaihoz tartozó értékek milyen módon tárolódna."],
+      helyes: "Többek között azt, hogy egy nyelvben milyen azonosítókat és kulcsszavakat lehet használni.",
+      kep: null
+    },
+    {
+      szoveg: "★★ Minek a definíciója a következő: A program egy olyan komponense, amely egy értékhalmaz és az értékhalmaz elemein végezhető műveletek által meghatározott?",
+      tipus: "radio",
+      valaszok: ["Adattípus", "Literál", "Konstans", "Kifejezés"],
+      helyes: "Adattípus",
+      kep: null
+    },
+    {
+      szoveg: "★ A program egy olyan komponense, amely műveleteket, azonosítókat és literálokat tartalmazhat, és egy érték leírására szolgál?",
+      tipus: "radio",
+      valaszok: ["Adattípus", "Literál", "Konstans", "Kifejezés"],
+      helyes: "Kifejezés",
       kep: null
     },
   ]
